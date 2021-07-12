@@ -62,7 +62,7 @@ module.exports = {
             },
             {
               label: 'Reddit',
-              href: 'reddit.com/r/revoltchat/',
+              href: 'https://reddit.com/r/revoltchat/',
             },
             {
               label: 'Twitter',

@@ -27,7 +27,7 @@ You can contribute translations through [**Weblate**](https://weblate.insrt.uk/e
 ### 3. Donate
 
 Revolt is not backed by a big company and does not serve you advertisements: Revolt relies entirely on donations for all financial backing.
-You can donate directly through [**Ko-fi**](https://ko-fi.com/insertish) or [contact me](https://insrt.uk) for alternative ways to donate.
+You can [learn more about donating here](https://insrt.uk/donate).
 If you are trying to donate a large sum of money, please consult me first.
 
 ### 4. Code

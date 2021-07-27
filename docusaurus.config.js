@@ -111,7 +111,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl:
-          'https://gitlab.insrt.uk/revolt/legal/-/edit/master/',
+          'https://gitlab.insrt.uk/revolt/documentation/developers/-/edit/master/',
         },
         /*blog: {
           showReadingTime: true,

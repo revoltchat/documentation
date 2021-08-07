@@ -134,7 +134,7 @@ module.exports = {
         debug: Boolean(process.env.DEBUG || process.env.CI),
         specs: [
           {
-            specUrl: 'OpenAPI.json',
+            specUrl: '/api/OpenAPI.json',
             routePath: '/api/',
           }
         ],

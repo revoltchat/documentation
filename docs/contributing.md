@@ -6,6 +6,23 @@ sidebar_position: 2
 
 Learn how to quickly get started with the Revolt stack and contribute to the project.
 
+## System Requirements
+
+Revolt is quite small, fragmented and easy to run which comes at the cost of a pretty demanding development environment, below are a few recommendations if you want to get started.
+
+- Modern multi-core CPU for Rust compilation, Ryzens are great for this job.
+- About 30gb of free disk space to ensure everything can be installed and built.
+- At minimum 12gb of free memory, I recommend having at least 16gb of system memory.
+  - `500mb` to run the Revolt stack
+  - `8gb` to run Visual Studio Code (includes rust-analyzer's 5gb memory usage)
+  - `2gb` to run Chromium (conservative estimate)
+
+:::caution note
+
+These do not apply if you're just working on the web app, you'll probably be fine with 2 gb of free memory or less.
+
+:::
+
 ## Prerequisites
 
 You need to have these tools installed and ready to go.
@@ -15,6 +32,8 @@ You need to have these tools installed and ready to go.
 - Rust ([use Nightly toolchain](https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust))
 - Docker
 - Git
+- Chromium (if you're just developing, Firefox is notoriously slow with web apps)
+- Firefox (if you're testing compatibility)
 
 ## Setup Environment
 

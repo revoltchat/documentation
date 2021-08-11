@@ -20,6 +20,13 @@ Authenticate with Revolt.
 }
 ```
 
+```json
+{
+    "type": "Authenticate",
+    "token": "{bot_token}"
+}
+```
+
 ### BeginTyping
 
 Tell other users that you have begun typing in a channel.

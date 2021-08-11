@@ -33,7 +33,7 @@ If you are trying to donate a large sum of money, please consult me first.
 ### 4. Code
 
 Revolt is an open source project which means you can volunteer to come help build features or fix bugs.
-All current issues and tasks are tracked on [**Wekan**](https://wekan.insrt.uk/b/jj3x5C6nbYzM6ERQD/revolt) (you may need to login for it to display correctly) and through [GitLab issues](https://gitlab.insrt.uk/revolt).
+All current issues and tasks are tracked on [**GitHub**](https://github.com/revoltchat).
 If you want to find a relatively easy task, look out for issues marked as **low-hanging fruit**.
 
 [**Learn more about how to contribute.**](/contributing)

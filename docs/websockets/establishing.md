@@ -15,3 +15,5 @@ You should listen out for [Error](/websockets/events#error) events to find out i
 After authenticating, the server will respond with [Authenticated](/websockets/events#authenticated) then it will send a [Ready](/websockets/events#ready) event containing useful data.
 
 The server will now start sending relevant events as they come in.
+
+You should [Ping](/websockets/events#ping) the server every 10 to 30 seconds to prevent your connection being dropped.

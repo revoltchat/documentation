@@ -11,3 +11,9 @@ You can find the address of the WS server [from the API](/api/#tag/Core/paths/~1
 
 - [Events](/websockets/events)
 - [Establishing a connection](/websockets/establishing)
+
+## Alternative Formats
+
+You can specifically tell the server that you want to operate in `json` or `msgpack` mode by connecting to the appropriate address.
+
+For example, `wss://ws.revolt.chat?format=msgpack` will allow you to communicate in binary msgpack formatted packets.

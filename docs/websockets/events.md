@@ -49,6 +49,17 @@ Tell other users that you have stopped typing in a channel.
 }
 ```
 
+### Ping
+
+Ping the server, you can specify a timestamp that you'll receive back.
+
+```json
+{
+    "type": "Ping",
+    "time": 0
+}
+```
+
 ## Server -> Client
 
 ### Error
@@ -76,6 +87,17 @@ The server has authenticated your connection and you will shortly start receivin
 ```json
 {
     "type": "Authenticated"
+}
+```
+
+### Pong
+
+Ping response from the server.
+
+```json
+{
+    "type": "Pong",
+    "time": 0
 }
 ```
 

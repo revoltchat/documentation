@@ -75,10 +75,6 @@ module.exports = {
               label: 'Mastodon',
               href: 'https://mastodon.social/web/accounts/106482042997274001',
             },
-            {
-              label: 'Discord',
-              href: 'https://discord.gg/AWFZeCc',
-            },
           ],
         },
         {

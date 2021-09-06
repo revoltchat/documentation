@@ -7,7 +7,7 @@ sidebar_position: 4
 To start answering this question:
 - Revolt is already pretty efficient and can scale both vertically and horizontally.
 - The problem areas are known and can be easily fixed with a bit of work, so we can improve performance as we go along.
-- As proof of this, right now, it costs nothing for the team to run Revolt, literally nothing. (18th August)
+- As proof of this, right now, it costs a very small amount for the team to run Revolt, just one VPS at 8 eur/mo. (6th Sept)
 
 Now you may be asking how will Revolt be funded?
 

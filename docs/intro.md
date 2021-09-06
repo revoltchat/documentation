@@ -17,7 +17,7 @@ You can help contribute to Revolt in a variety of ways.
 The easiest, but most important way to contribute to Revolt, is to voice your opinion and give feedback.
 We are always awaiting your feature suggestions, bug reports and general opinions on everything Revolt has to offer.
 
-From the Revolt app you can navigate to the [**feedback tab**](https://app.revolt.chat/settings/feedback), or open an issue on the relevant [GitLab project](https://gitlab.insrt.uk/revolt).
+From the Revolt app you can navigate to the [**feedback tab**](https://app.revolt.chat/settings/feedback), or open an issue on the relevant [GitHub project](https://github.com/revoltchat).
 
 ### 2. Translate
 

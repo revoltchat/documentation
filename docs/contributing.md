@@ -79,11 +79,11 @@ You can now access the Web App at [http://local.revolt.chat:3001](http://local.r
 Certain features may need extra manual configuration.
 
 - Autumn requires you to manually create **minio** buckets.
-  This issue is known and is being [tracked here](https://gitlab.insrt.uk/revolt/autumn/-/issues/2).
+  This issue is known and is being [tracked here](https://github.com/revoltchat/autumn/issues/1).
 
   To resolve this issue:
 
-  - Open [Autumn configuration here](https://gitlab.insrt.uk/revolt/autumn/-/blob/master/Autumn.toml) and take note of all the `tags.x` entries, e.g. `attachments`, `avatars`.
+  - Open [Autumn configuration here](https://github.com/revoltchat/autumn/blob/master/Autumn.toml) and take note of all the `tags.x` entries, e.g. `attachments`, `avatars`.
   - Open minio in your browser: [http://localhost:9050](http://localhost:9050)
   - Login with the credentials: `minioautumn` / `minioautumn`
   - Press the plus button in the bottom left and create new bucket.

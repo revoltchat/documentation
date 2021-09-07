@@ -44,7 +44,7 @@ Tell other users that you have stopped typing in a channel.
 
 ```json
 {
-    "type": "BeginTyping",
+    "type": "EndTyping",
     "channel": "{channel_id}"
 }
 ```
@@ -330,7 +330,7 @@ Server role has been updated or created.
 
 ```json
 {
-    "type": "ServerMemberUpdate",
+    "type": "ServerRoleUpdate",
     "id": "{server_id}",
     "role_id": "{role_id}",
     "data": {..},

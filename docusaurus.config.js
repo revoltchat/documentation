@@ -85,10 +85,6 @@ module.exports = {
               to: '/blog',
             },*/
             {
-              label: 'Docusaurus\'s GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-            {
               label: 'Revolt\'s GitHub',
               href: 'https://github.com/revoltchat',
             },

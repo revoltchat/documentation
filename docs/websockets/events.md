@@ -15,15 +15,7 @@ Authenticate with Revolt.
 ```json
 {
     "type": "Authenticate",
-    "user_id": "{user_id}",
-    "session_token": "{session_token}"
-}
-```
-
-```json
-{
-    "type": "Authenticate",
-    "token": "{bot_token}"
+    "token": "{token}"
 }
 ```
 
@@ -44,7 +36,7 @@ Tell other users that you have stopped typing in a channel.
 
 ```json
 {
-    "type": "BeginTyping",
+    "type": "EndTyping",
     "channel": "{channel_id}"
 }
 ```

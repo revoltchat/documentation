@@ -56,7 +56,7 @@ Ping the server, you can specify a timestamp that you'll receive back.
 ```json
 {
     "type": "Ping",
-    "time": 0
+    "data": 0
 }
 ```
 
@@ -97,7 +97,7 @@ Ping response from the server.
 ```json
 {
     "type": "Pong",
-    "time": 0
+    "data": 0
 }
 ```
 

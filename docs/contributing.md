@@ -23,6 +23,10 @@ These do not apply if you're just working on the web app, you'll probably be fin
 
 :::
 
+## Consider Alternatives
+
+If you want to deploy Revolt in production, consider using [revolt/self-hosted](https://github.com/revoltchat/self-hosted) instead.
+
 ## Prerequisites
 
 You need to have these tools installed and ready to go.

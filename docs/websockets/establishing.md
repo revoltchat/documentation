@@ -6,7 +6,7 @@ sidebar_position: 3
 
 To get started, you should have:
 - A WebSocket URL, which is found from the API root.
-- A valid user ID + session token.
+- A valid session or bot token.
 
 Begin by connecting to the server, once you're connected then you can send a [Authenticate](/websockets/events#authenticate) event to the server.
 

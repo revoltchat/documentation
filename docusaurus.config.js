@@ -89,8 +89,8 @@ module.exports = {
               href: 'https://github.com/revoltchat',
             },
             {
-              label: 'GitLab',
-              href: 'https://gitlab.insrt.uk/revolt',
+              label: 'Project Tracker',
+              href: 'https://github.com/orgs/revoltchat/projects/2?fullscreen=true',
             },
           ],
         },
@@ -112,7 +112,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl:
-          'https://github.com/revoltchat/documentation/developers/edit/master/',
+          'https://github.com/revoltchat/documentation/tree/master/docs/',
         },
         /*blog: {
           showReadingTime: true,

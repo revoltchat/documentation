@@ -34,7 +34,7 @@ module.exports = {
           label: 'revolt.js',
         },
         {
-          href: 'https://github.com/revoltchat/delta',
+          href: 'https://github.com/revoltchat',
           label: 'GitHub',
           position: 'right',
         },
@@ -85,8 +85,12 @@ module.exports = {
               to: '/blog',
             },*/
             {
-              label: 'Revolt\'s GitHub',
+              label: 'GitHub',
               href: 'https://github.com/revoltchat',
+            },
+            {
+              label: 'Project Tracker',
+              href: 'https://github.com/orgs/revoltchat/projects/2?fullscreen=true',
             },
           ],
         },

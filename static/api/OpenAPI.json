@@ -3,7 +3,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Revolt API",
-    "version": "0.5.3-alpha.0-patch.0",
+    "version": "0.5.3-alpha.2",
     "description": "User-first privacy focused chat platform built with modern web technologies.\n\n# Authentication\n\nCurrently all relevant requests are authenticated by the use of two headers which identify a session.\n\n<SecurityDefinitions />",
     "termsOfService": "https://revolt.chat/terms",
     "contact": {
@@ -1130,31 +1130,10 @@
                               "type": "string"
                             }
                           },
-                          "last_message": {
-                            "description": "Last message sent in channel",
-                            "type": "object",
-                            "properties": {
-                              "_id": {
-                                "description": "Message ID",
-                                "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                "type": "string"
-                              },
-                              "author": {
-                                "description": "Author ID",
-                                "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                "type": "string"
-                              },
-                              "short": {
-                                "description": "Short content of message",
-                                "maxLength": 128,
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "_id",
-                              "author",
-                              "short"
-                            ]
+                          "last_message_id": {
+                            "description": "Id of the last message in this channel",
+                            "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+                            "type": "string"
                           }
                         },
                         "required": [
@@ -1198,31 +1177,10 @@
                             "description": "Group description",
                             "type": "string"
                           },
-                          "last_message": {
-                            "description": "Last message sent in channel",
-                            "type": "object",
-                            "properties": {
-                              "_id": {
-                                "description": "Message ID",
-                                "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                "type": "string"
-                              },
-                              "author": {
-                                "description": "Author ID",
-                                "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                "type": "string"
-                              },
-                              "short": {
-                                "description": "Short content of message",
-                                "maxLength": 128,
-                                "type": "string"
-                              }
-                            },
-                            "required": [
-                              "_id",
-                              "author",
-                              "short"
-                            ]
+                          "last_message_id": {
+                            "description": "Id of the last message in this channel",
+                            "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+                            "type": "string"
                           },
                           "icon": {
                             "description": "Group icon",
@@ -3905,7 +3863,7 @@
                           }
                         },
                         "badges": {
-                          "description": "Bitfield of user's badges",
+                          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
                           "type": "number"
                         },
                         "status": {
@@ -3932,7 +3890,7 @@
                           "type": "boolean"
                         },
                         "flags": {
-                          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+                          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
                           "type": "number"
                         },
                         "bot": {
@@ -6749,7 +6707,7 @@
                           }
                         },
                         "badges": {
-                          "description": "Bitfield of user's badges",
+                          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
                           "type": "number"
                         },
                         "status": {
@@ -6776,7 +6734,7 @@
                           "type": "boolean"
                         },
                         "flags": {
-                          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+                          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
                           "type": "number"
                         },
                         "bot": {
@@ -7165,7 +7123,7 @@
                           }
                         },
                         "badges": {
-                          "description": "Bitfield of user's badges",
+                          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
                           "type": "number"
                         },
                         "status": {
@@ -7192,7 +7150,7 @@
                           "type": "boolean"
                         },
                         "flags": {
-                          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+                          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
                           "type": "number"
                         },
                         "bot": {
@@ -8320,7 +8278,7 @@
                           }
                         },
                         "badges": {
-                          "description": "Bitfield of user's badges",
+                          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
                           "type": "number"
                         },
                         "status": {
@@ -8347,7 +8305,7 @@
                           "type": "boolean"
                         },
                         "flags": {
-                          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+                          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
                           "type": "number"
                         },
                         "bot": {
@@ -9401,7 +9359,7 @@
                           }
                         },
                         "badges": {
-                          "description": "Bitfield of user's badges",
+                          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
                           "type": "number"
                         },
                         "status": {
@@ -9428,7 +9386,7 @@
                           "type": "boolean"
                         },
                         "flags": {
-                          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+                          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
                           "type": "number"
                         },
                         "bot": {
@@ -9747,7 +9705,7 @@
                           }
                         },
                         "badges": {
-                          "description": "Bitfield of user's badges",
+                          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
                           "type": "number"
                         },
                         "status": {
@@ -9774,7 +9732,7 @@
                           "type": "boolean"
                         },
                         "flags": {
-                          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+                          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
                           "type": "number"
                         },
                         "bot": {
@@ -10169,31 +10127,10 @@
                                     "type": "string"
                                   }
                                 },
-                                "last_message": {
-                                  "description": "Last message sent in channel",
-                                  "type": "object",
-                                  "properties": {
-                                    "_id": {
-                                      "description": "Message ID",
-                                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                      "type": "string"
-                                    },
-                                    "author": {
-                                      "description": "Author ID",
-                                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                      "type": "string"
-                                    },
-                                    "short": {
-                                      "description": "Short content of message",
-                                      "maxLength": 128,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "required": [
-                                    "_id",
-                                    "author",
-                                    "short"
-                                  ]
+                                "last_message_id": {
+                                  "description": "Id of the last message in this channel",
+                                  "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+                                  "type": "string"
                                 }
                               },
                               "required": [
@@ -10249,31 +10186,10 @@
                                   "description": "Group description",
                                   "type": "string"
                                 },
-                                "last_message": {
-                                  "description": "Last message sent in channel",
-                                  "type": "object",
-                                  "properties": {
-                                    "_id": {
-                                      "description": "Message ID",
-                                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                      "type": "string"
-                                    },
-                                    "author": {
-                                      "description": "Author ID",
-                                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                                      "type": "string"
-                                    },
-                                    "short": {
-                                      "description": "Short content of message",
-                                      "maxLength": 128,
-                                      "type": "string"
-                                    }
-                                  },
-                                  "required": [
-                                    "_id",
-                                    "author",
-                                    "short"
-                                  ]
+                                "last_message_id": {
+                                  "description": "Id of the last message in this channel",
+                                  "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+                                  "type": "string"
                                 },
                                 "icon": {
                                   "description": "Group icon",
@@ -10607,7 +10523,9 @@
                                     "TextChannel"
                                   ]
                                 },
-                                "last_message": {
+                                "last_message_id": {
+                                  "description": "Id of the last message in this channel",
+                                  "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
                                   "type": "string"
                                 }
                               },
@@ -11225,6 +11143,10 @@
                         "nsfw": {
                           "description": "Whether this server is marked as not safe for work",
                           "type": "boolean"
+                        },
+                        "flags": {
+                          "description": "Server flags\n\n`1`: Official Revolt server\n`2`: Verified community server",
+                          "type": "number"
                         }
                       },
                       "required": [
@@ -12076,45 +11998,6 @@
         }
       }
     },
-    "LastMessage": {
-      "description": "Last message sent in channel",
-      "type": "object",
-      "properties": {
-        "_id": {
-          "description": "Message ID",
-          "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-          "type": "string"
-        },
-        "author": {
-          "description": "Author ID",
-          "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-          "type": "string"
-        },
-        "short": {
-          "description": "Short content of message",
-          "maxLength": 128,
-          "type": "string"
-        }
-      },
-      "required": [
-        "_id",
-        "author",
-        "short"
-      ],
-      "definitions": {
-        "AttachmentTag": {
-          "description": "Attachment tag",
-          "enum": [
-            "attachments",
-            "avatars",
-            "backgrounds",
-            "banners",
-            "icons"
-          ],
-          "type": "string"
-        }
-      }
-    },
     "SavedMessagesChannel": {
       "description": "Saved Messages channel has only one participant, the user who created it.",
       "type": "object",
@@ -12180,31 +12063,10 @@
             "type": "string"
           }
         },
-        "last_message": {
-          "description": "Last message sent in channel",
-          "type": "object",
-          "properties": {
-            "_id": {
-              "description": "Message ID",
-              "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-              "type": "string"
-            },
-            "author": {
-              "description": "Author ID",
-              "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-              "type": "string"
-            },
-            "short": {
-              "description": "Short content of message",
-              "maxLength": 128,
-              "type": "string"
-            }
-          },
-          "required": [
-            "_id",
-            "author",
-            "short"
-          ]
+        "last_message_id": {
+          "description": "Id of the last message in this channel",
+          "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+          "type": "string"
         }
       },
       "required": [
@@ -12261,31 +12123,10 @@
           "description": "Group description",
           "type": "string"
         },
-        "last_message": {
-          "description": "Last message sent in channel",
-          "type": "object",
-          "properties": {
-            "_id": {
-              "description": "Message ID",
-              "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-              "type": "string"
-            },
-            "author": {
-              "description": "Author ID",
-              "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-              "type": "string"
-            },
-            "short": {
-              "description": "Short content of message",
-              "maxLength": 128,
-              "type": "string"
-            }
-          },
-          "required": [
-            "_id",
-            "author",
-            "short"
-          ]
+        "last_message_id": {
+          "description": "Id of the last message in this channel",
+          "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+          "type": "string"
         },
         "icon": {
           "description": "Group icon",
@@ -12803,7 +12644,9 @@
                 "TextChannel"
               ]
             },
-            "last_message": {
+            "last_message_id": {
+              "description": "Id of the last message in this channel",
+              "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
               "type": "string"
             }
           },
@@ -13093,31 +12936,10 @@
                     "type": "string"
                   }
                 },
-                "last_message": {
-                  "description": "Last message sent in channel",
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "description": "Message ID",
-                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                      "type": "string"
-                    },
-                    "author": {
-                      "description": "Author ID",
-                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                      "type": "string"
-                    },
-                    "short": {
-                      "description": "Short content of message",
-                      "maxLength": 128,
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "_id",
-                    "author",
-                    "short"
-                  ]
+                "last_message_id": {
+                  "description": "Id of the last message in this channel",
+                  "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+                  "type": "string"
                 }
               },
               "required": [
@@ -13173,31 +12995,10 @@
                   "description": "Group description",
                   "type": "string"
                 },
-                "last_message": {
-                  "description": "Last message sent in channel",
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "description": "Message ID",
-                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                      "type": "string"
-                    },
-                    "author": {
-                      "description": "Author ID",
-                      "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
-                      "type": "string"
-                    },
-                    "short": {
-                      "description": "Short content of message",
-                      "maxLength": 128,
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "_id",
-                    "author",
-                    "short"
-                  ]
+                "last_message_id": {
+                  "description": "Id of the last message in this channel",
+                  "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
+                  "type": "string"
                 },
                 "icon": {
                   "description": "Group icon",
@@ -13531,7 +13332,9 @@
                     "TextChannel"
                   ]
                 },
-                "last_message": {
+                "last_message_id": {
+                  "description": "Id of the last message in this channel",
+                  "pattern": "[0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26}",
                   "type": "string"
                 }
               },
@@ -16767,6 +16570,10 @@
         "nsfw": {
           "description": "Whether this server is marked as not safe for work",
           "type": "boolean"
+        },
+        "flags": {
+          "description": "Server flags\n\n`1`: Official Revolt server\n`2`: Verified community server",
+          "type": "number"
         }
       },
       "required": [
@@ -17446,7 +17253,7 @@
           }
         },
         "badges": {
-          "description": "Bitfield of user's badges",
+          "description": "Bitfield of user's badges\n\n`1`: Developer\n`2`: Translator\n`4`: Supporter\n`8`: Responsible Disclosure\n`16`: Revolt Team\n`256`: Early Adopter",
           "type": "number"
         },
         "status": {
@@ -17473,7 +17280,7 @@
           "type": "boolean"
         },
         "flags": {
-          "description": "User flags\n\n`0x1`: Account is suspended\n`0x2`: Account was deleted\n`0x4`: Account is banned",
+          "description": "User flags\n\n`1`: Account is suspended\n`2`: Account was deleted\n`4`: Account is banned",
           "type": "number"
         },
         "bot": {

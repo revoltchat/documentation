@@ -325,7 +325,7 @@ Server role has been updated or created.
 
 ```json
 {
-    "type": "ServerMemberUpdate",
+    "type": "ServerRoleUpdate",
     "id": "{server_id}",
     "role_id": "{role_id}",
     "data": {..},

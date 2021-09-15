@@ -12,7 +12,7 @@ Use it to **make your text *stand out!***
 | Style             | Markdown                                             |
 |-------------------|------------------------------------------------------|
 | **bold**          | \*\*bold\*\* or \_\_bold\_\_                         |
-| *italics*         | \*italics\* or \*italics\*                           |
+| *italics*         | \*italics\* or \_italics\_                           |
 | **bold italics**  | \*\*\*bold italics\*\*\* or \_\_\_bold italics\_\_\_ |
 | ~~strikethrough~~ | \~\~strikethrough\~\~                                |
 

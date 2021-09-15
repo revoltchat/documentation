@@ -281,7 +281,10 @@ Server member details updated.
 ```json
 {
     "type": "ServerMemberUpdate",
-    "id": "{server_id}",
+    "id": {
+        "server": "{server_id}",
+        "user": "{user_id}"
+    },
     "data": {..},
     "clear": "{field}"
 }
@@ -299,7 +302,7 @@ A user has joined the group.
 ```json
 {
     "type": "ServerMemberJoin",
-    "id": "{channel_id}",
+    "id": "{server_id}",
     "user": "{user_id}"
 }
 ```
@@ -311,7 +314,7 @@ A user has left the group.
 ```json
 {
     "type": "ServerMemberLeave",
-    "id": "{channel_id}",
+    "id": "{server_id}",
     "user": "{user_id}"
 }
 ```
@@ -322,7 +325,7 @@ Server role has been updated or created.
 
 ```json
 {
-    "type": "ServerMemberUpdate",
+    "type": "ServerRoleUpdate",
     "id": "{server_id}",
     "role_id": "{role_id}",
     "data": {..},
@@ -353,7 +356,7 @@ User has been updated.
 ```json
 {
     "type": "UserUpdate",
-    "id": "{server_id}",
+    "id": "{user_id}",
     "data": {..},
     "clear": "{field}"
 }

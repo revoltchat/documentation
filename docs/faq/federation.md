@@ -18,21 +18,19 @@ This requires a bit of time to answer, hopefully everything can be answered here
 
 ### Complexity
 
-Federation and Discord-style protocols are inherently incompatible, I know even the fosscord project hit this issue and they have way more core developers than we do.
+Federation and Discord-style protocols are inherently incompatible, it would be a huge job to even begin to get it to play nicely together.
 
 While our protocol could theoretically be changed, it would break virtually everything. The current API heavily relies on trusting the server and federating the entire API would be a huge pain as I will describe below.
 
 ### Time
 
-The main Revolt team comprises of mainly students (17 to 19 years), and most of the work is done by me, I am personally (as of time writing this, 18th August), starting my first year at university in just a month or so. I do not physically have the time to even consider planning out federation.
+The main Revolt team comprises of mainly students (17 to 19 years), and most of the work is done by me (insert) and I have just started my first year at university. I do not physically have the time to even consider planning out federation, it would likely require a complete rewrite of everything just due to the nature of how it has been designed, I want to get Revolt to a use-able state, federation will get in the way of that goal.
 
 ### Nobody actually wants it
 
-The community and other developers have expressed that they don't actually see a benefit in having federation for Revolt.
+This is the opinion part of the FAQ, I would like to ask you explicitly to not see this as an opportunity to dismiss the other **two points which hold significantly more weight** as I've seen some people do. The community and other developers have expressed that they don't actually see a benefit in having federation for Revolt, this is just our general opinion about the matter and I agree in the fact that it would probably just kill Revolt in the fact that the entire project would need to essentially be put on pause to implement this.
 
-For a project of this size, it creates a lot of fragmentation and again if someone wants federation, Matrix exists, I actively recommend people to use it if they want solid federation. We are not here to create or build on Matrix, we are here to provide people with an awesome open-source alternative to Discord that people don’t have to worry about their privacy on and are free to self-host.
-
-From personal experience, I’ve generally found federated protocols to not be suitable for real time communication, Matrix is incredibly buggy at times and it’s left a sour taste in my mouth.
+Previously I mentioned here that it would cause fragmentation, I would say that was not right, in fact it would be quite beneficial in allowing other instances to interact with the main server but we have alternative ideas which will allow us to bridge that gap. For example, single sign-on with the main instance, bridges between servers and so on.
 
 Honorable mention:
 

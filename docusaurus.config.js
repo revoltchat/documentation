@@ -112,7 +112,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
           editUrl:
-          'https://github.com/revoltchat/documentation/tree/master/docs/',
+          'https://github.com/revoltchat/documentation/blob/master/',
         },
         /*blog: {
           showReadingTime: true,

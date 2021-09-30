@@ -8,7 +8,7 @@ This question comes around every now and then, a lot of people are curious why R
 
 ## Short Answer
 
-In terms of **specification**, Revolt is meant to be an alternative to things like Discord and Rocket, not Matrix. Matrix does federation and does it well, we do not intend to compete with it.
+In terms of **specification**, Revolt is meant to be an alternative to things like Discord and XMPP, not Matrix. Matrix does federation and does it well, we do not intend to compete with it.
 
 In terms of **the situation**, we started the project when none of us even knew what federation was, so it was never even considered from the start. Although we have other reasons for not including it now as below.
 
@@ -18,7 +18,7 @@ This requires a bit of time to answer, hopefully everything can be answered here
 
 ### Complexity
 
-Federation and Discord-style protocols are inherently incompatible, it would be a huge job to even begin to get it to play nicely together.
+Equality federation and Discord-style protocols are inherently incompatible, it would be a huge job to even begin to get it to play nicely together. Matrix-style equality federation require non-finality of authorisation and a deterministic conflict resolution algorithm. XMPP-style master-slave federation is doable, but that would create inconsistent timeline views across users of a rooms connecting from different instances, which is a usability nightmare to begin with.
 
 While our protocol could theoretically be changed, it would break virtually everything. The current API heavily relies on trusting the server and federating the entire API would be a huge pain as I will describe below.
 

@@ -18,7 +18,7 @@ This requires a bit of time to answer, hopefully everything can be answered here
 
 ### Complexity
 
-Equality federation and Discord-style protocols are inherently incompatible, it would be a huge job to even begin to get it to play nicely together. Matrix-style equality federation require non-finality of authorisation and a deterministic conflict resolution algorithm. XMPP-style master-slave federation is doable, but that would create inconsistent timeline views across users of a rooms connecting from different instances, which is a usability nightmare to begin with.
+Equality federation and Discord-style protocols are inherently incompatible, it would be a huge job to even begin to get it to play nicely together. Matrix-style equality federation requires non-finality of authorisation and a deterministic conflict resolution algorithm. XMPP-style master-slave federation is doable, but that would create inconsistent timeline views across users of a rooms connecting from different instances, which is a usability nightmare to begin with.
 
 While our protocol could theoretically be changed, it would break virtually everything. The current API heavily relies on trusting the server and finality of event authorisation, and federating the entire API would be a huge pain as I will describe below.
 

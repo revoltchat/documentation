@@ -14,5 +14,5 @@ I really want to push Revolt as far as I can on the current budget, we have abou
 Now you may be asking how will Revolt be funded?
 
 - We have a variety of monetisation ideas lined up internally, **none of which involve paywalling features**!
-- We currently have [£1000 in donations](https://cloud.insrt.uk/s/K6QDcgBAwgdFqXb) (as of 15th September) from our community, which haven't been spent at all.
+- We currently have [£1666 in donations](https://docs.google.com/spreadsheets/d/19mRWxMAeLI6Fr-Nx-TRANeZp0bVSU3Ag) (as of 10th November) from our community, which haven't been spent at all.
 - Given everything I've seen so far, it's likely some of the monetisation strategies we thought of are likely to succeed, some will also allow us to support community members who create awesome things.

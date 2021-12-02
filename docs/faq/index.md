@@ -13,3 +13,4 @@ All of these have been written from the perspective of the lead developer.
 - [2. Why another project?](/faq/why_new)
 - [3. How will Revolt scale and pay for itself?](/faq/monetisation)
 - [4. How to pronounce "revolt" and "revite"?](/faq/pronounce.md)
+- [5. What badges are available on Revolt?](/faq/badges.md)

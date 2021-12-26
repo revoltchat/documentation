@@ -19,7 +19,7 @@ Badges are little images, usually to signify something, on your profile.
 | Raccoon | <img src="https://app.revolt.chat/assets/badges/raccoon.svg" height="32px" /> | raccoon 🦝 | <img src="https://static.revolt.chat/emoji/mutant/274c.svg?rev=3" height="32px" /> |
 | Relevant Joke Badge 1 | <img src="https://app.revolt.chat/assets/badges/amog.svg" height="32px" /> | Whatever the funny joke is at any given time. | <img src="https://static.revolt.chat/emoji/mutant/274c.svg?rev=3" height="32px" /> |
 
-\* Developer page is obtainable if you are deemed worthy.
+\* Developer badge is obtainable if you are deemed worthy.
 
 ### Example
 

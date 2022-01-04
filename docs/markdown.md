@@ -40,8 +40,8 @@ You can use code blocks for text that needs to be easily copied, such as code.
 This is a multi-line code block!
 ```
 
-```html
-<h1>This is a multi-line code block, with the language set to HTML</h1>
+```js
+let x = "This is a multi-line code block, with the language set to JS"
 ```
 
 :::
@@ -52,8 +52,8 @@ This is a multi-line code block!
 This is a multi-line code block!  
 \`\`\`
 
-\`\`\`html  
-&lt;h1&gt;This is a multi-line code block, with the language set to HTML.&lt;/h1&gt;  
+\`\`\`js  
+let x = "This is a multi-line code block, with the language set to JS"  
 \`\`\`
 
 :::
@@ -67,7 +67,7 @@ This is a multi-line code block!
 
 :::tip
 
-The language display, shown above in purple, also acts as a copy button:
+The language display, shown above as a purple button, also acts as a copy button:
 If you click on it, the entire contents of the code block get pasted into your clipboard!
 __This is especially useful for code blocks that contain a lot of text.__  
 
@@ -230,15 +230,30 @@ You can use KaTeX to render math and some other advanced markup in your messages
 
 See [KaTeX's documentation](https://katex.org/docs/supported.html) for more information.
 
+## Timestamps
+
+You can display timestamps in your messages. The format requires you to get the time as a Unix timestamp. You can do this with online services like [unixtimestamp.com](https://www.unixtimestamp.com/).
+
+![An embedded timestamp in a message.](./assets/markdown/timestamps.png)
+
+| Style                               | Markdown           |
+|-------------------------------------|--------------------|
+| `01:37`                             | <t:1663846662:t> |
+| `01:37:42`                          | <t:1663846662:T> |
+| `22 September 2022`                 | <t:1663846662:D> |
+| `22 September 2022 01:37`           | <t:1663846662:f> |
+| `Thursday, 22 September 2022 01:37` | <t:1663846662:F> |
+| `in 9 months` (f.e.)                | <t:1663846662:R> |
+
 ## Emoji
 
 You can use emoji in your messages. This allows you to express yourself in a more human way.
 
-| Style                                                          | Markdown                           |
-|----------------------------------------------------------------|------------------------------------|
-| ![🤠](https://static.revolt.chat/emoji/mutant/1f920.svg?rev=3) | \:cowboy_hat_face\:                |
-| ![😳](https://static.revolt.chat/emoji/mutant/1f633.svg?rev=3) | \:flushed\:                        |
-| ![😍](https://static.revolt.chat/emoji/mutant/1f60d.svg?rev=3) | \:heart_eyes\:                     |
-| ![🥰](https://static.revolt.chat/emoji/mutant/1f970.svg?rev=3) | \:smiling_face_with_three_hearts\: |
+| Style                                                          | Markdown                                |
+|----------------------------------------------------------------|-----------------------------------------|
+| ![🤠](https://static.revolt.chat/emoji/mutant/1f920.svg?rev=3) | :cowboy_hat_face<!---->:                |
+| ![😳](https://static.revolt.chat/emoji/mutant/1f633.svg?rev=3) | :flushed<!---->:                        |
+| ![😍](https://static.revolt.chat/emoji/mutant/1f60d.svg?rev=3) | :heart_eyes<!---->:                     |
+| ![🥰](https://static.revolt.chat/emoji/mutant/1f970.svg?rev=3) | :smiling_face_with_three_hearts<!---->: |
 
 You can see the full list of emoji shortcodes using auto-completion, simply start typing with a `:`.

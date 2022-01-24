@@ -2,9 +2,9 @@
 sidebar_position: 5
 ---
 
-# 4. How to pronounce Revolt?
+# 4. How do you pronounce Revolt?
 
-Contributed by [@Albonycal](https://github.com/revoltchat/documentation/pull/9).
+The first audio file was contributed by [@Albonycal](https://github.com/revoltchat/documentation/pull/9).
 
 ### Revolt
 

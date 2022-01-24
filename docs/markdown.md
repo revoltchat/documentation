@@ -67,8 +67,8 @@ let x = "This is a multi-line code block, with the language set to JS"
 
 :::tip
 
-The language display, shown above as a purple button, also acts as a copy button:
-If you click on it, the entire contents of the code block get pasted into your clipboard!
+The language display, shown above as a purple button, also acts as a copy button -
+if you click on it, the entire contents of the code block get pasted into your clipboard!
 __This is especially useful for code blocks that contain a lot of text.__  
 
 :::
@@ -94,6 +94,12 @@ trash can sus
 \> — Wayne Dyer   
 
 trash can sus
+
+:::
+
+:::warning
+
+Three Block Quotes on a single line will *not* quote the whole message - it will make the first line a triple-quote.
 
 :::
 
@@ -256,4 +262,4 @@ You can use emoji in your messages. This allows you to express yourself in a mor
 | ![😍](https://static.revolt.chat/emoji/mutant/1f60d.svg?rev=3) | :heart_eyes<!---->:                     |
 | ![🥰](https://static.revolt.chat/emoji/mutant/1f970.svg?rev=3) | :smiling_face_with_three_hearts<!---->: |
 
-You can see the full list of emoji shortcodes using auto-completion, simply start typing with a `:`.
+You can see the full list of emoji shortcodes using auto-completion - simply start typing with a `:`.

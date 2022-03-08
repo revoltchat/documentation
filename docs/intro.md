@@ -26,22 +26,13 @@ You can contribute translations through [**Weblate**](https://weblate.insrt.uk/e
 
 ### 3. Donate
 
-Revolt is not backed by a big company and does not serve you advertisements: Revolt relies entirely on donations for all financial backing.
+Revolt is not backed by a big company and does not serve you advertisements: Revolt currently relies entirely on donations for all financial backing.
 You can [learn more about donating here](https://insrt.uk/donate).
 If you are trying to donate a large sum of money, please consult me first.
 
 ### 4. Code
 
 Revolt is an open source project which means you can volunteer to come help build features or fix bugs.
-All current issues and tasks are tracked on [**GitHub**](https://github.com/revoltchat).
-If you want to find a relatively easy task, look out for issues marked as **low-hanging fruit**.
+All current issues and tasks are tracked on [**GitHub**](https://github.com/revoltchat) but please read the [contribution guide first](https://github.com/revoltchat/revolt/discussions/282#discussion-3777997).
 
-[**Learn more about how to contribute.**](/contributing)
-
-:::info
-
-Please let us know when picking up an issue so that multiple people don't conflict and so that we can work out a plan if the issue or feature is quite large.
-
-You can ask on the [**official Revolt server**](https://app.revolt.chat/invite/Testers) or open an issue on GitHub.
-
-:::
+[**Learn how to run the Revolt stack locally.**](/contributing)

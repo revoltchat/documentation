@@ -2,36 +2,46 @@
 sidebar_position: 2
 ---
 
-# 1. Why no federation?
+# 1. No federation?
 
-This question comes around every now and then. A lot of people are curious why Revolt isn't federated - this page hopes to clarify that.
+:::caution
+
+This article expects prior knowledge of federation, [learn more about it here](https://matrix.org/faq/#what-does-federated-mean%3F).
+
+In this case, we are talking about letting users send messages and join channels on other servers. While we may not be building federation, we may support other features in the goal of decentralisation in the future.
+
+:::
+
+This question comes around every now and then.<br/>A lot of people are curious why Revolt isn't federated - this page hopes to clarify that.
 
 ## Short Answer
 
-In terms of the **specification**, Revolt is meant to be an alternative to things like Discord and Rocket, not Matrix. Matrix does federation and does it well, and we do not intend to compete with it.
+We don't think federation is beneficial to Revolt and would actively hinder our stance on privacy. In short, federation is prone to leaking your metadata, could make removing your data harder, and we otherwise have no incentive to develop support if it we aren't able to use it for the main platform (revolt.chat).
 
-In terms of the **situation**, we started the project when none of us even knew what federation was, so it was never even considered from the start. Although we have other reasons for not including it now as below.
+In terms of technical reasons:
+- We don't have the manpower or resources to implement federation into our protocol.
+- It would prove to be difficult to adopt our protocol to work in a federated style.
+- It does not let us guarantee the security and safety of our users.
+- It does not let us guarantee real-time communication.
+
+Some of these points are explained in-depth below.
 
 ## Long Technical Answer
 
-This requires a bit of time to answer. Hopefully everything can be answered here, but if you have any questions feel free to [ask on the Revolt Testers server](https://rvlt.gg/Testers) or [liase with me directly](https://insrt.uk).
+Hopefully everything can be answered here, but if you have any questions feel free to [ask on the Revolt Testers server](https://rvlt.gg/Testers) or [liase with me directly](https://insrt.uk).
 
 ### Complexity
 
-Federation and Discord-style protocols are inherently incompatible. It would be a huge job to even begin to get them to play nicely together.
+The protocol as it stands is developed in a centralised manner, all the components within the system expect that all of the data we have and are processing is valid and trusted. Adding federation into the mix means updating the entire identity system, figuring out how events should now be distributed, figuring out how to trust information going in and out of the server, and also supporting running a server without federation.
 
-While our protocol could theoretically be changed, it would break virtually everything. The current API heavily relies on trusting the server and federating the entire API would be a huge pain as I will describe below.
+To expand on the last point, I do not believe we can be GDPR compliant or actively protect user's privacy if we enable federation on the main platform (revolt.chat) without investing a lot of time into figuring out how to safeguard user's metadata (an issue which appears to be quite prominent on other federated applications).
+
+Ultimately, it's not worth it for us to build federation in if it's not feasible for us to use it on the main platform.
 
 ### Time
 
-The main Revolt team mainly comprises of students (17 to 19 years), and most of the work is done by me (Insert). I have just started my first year at university. I do not physically have the time to even consider planning out federation, and it would likely require a complete rewrite of everything just due to the nature of how it has been designed. I want to get Revolt to a useable state, and working on federation would get in the way of that goal.
+The Revolt team currently comprises of mainly students (18 to 20 years old), and the majority of the project organisation and work is being done by one person (insert). We do not have the manpower to build anything like this out.
 
-### Nobody actually wants it
+To quote myself from earlier:
 
-This is the opinion part of the FAQ. I would like to ask you explicitly to **not see this as an opportunity to dismiss the other two points** which hold **significantly more weight** (as I've seen some people do). The community - and other developers - have expressed that they don't actually see a benefit in having federation for Revolt. This is just our general opinion on the matter and I agree that it would probably just kill Revolt in the sense that the entire project would need to essentially be put on pause to implement this.
-
-Previously I mentioned here that it would cause fragmentation. I would say that was not right - in fact, it would be quite beneficial in allowing other instances to interact with the main server - but we have alternative ideas which will allow us to bridge that gap. For example, we may add single sign-on with the main instance, bridges between instances and so on.
-
-Honorable mention:
-
-<img src="https://autumn.revolt.chat/attachments/7mYMu8Rj0xvO0-xBwKFNgKW1a7NP82SIGq2GDI55m6/image.png" width="320" />
+> I have just started my first year at university. I do not physically have the time to even consider planning out federation, and it would likely require a complete rewrite of everything just due to the nature of how it has been designed. I want to get Revolt to a useable state, and working on federation would get in the way of that goal.

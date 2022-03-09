@@ -8,7 +8,7 @@ sidebar_position: 2
 
 This article expects prior knowledge of federation, [learn more about it here](https://matrix.org/faq/#what-does-federated-mean%3F).
 
-In this case, we are talking about letting users send messages and join channels on other servers. While we may not be building federation, we may support other features in the goal of decentralisation in the future.
+In this case, we are talking about letting users send messages and join channels on other servers.
 
 :::
 

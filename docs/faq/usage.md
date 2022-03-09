@@ -13,7 +13,7 @@ In general:
 - Please make explicit distinctions between Revolt (the platform, "revolt.chat") and the Revolt software.
 - The Revolt software is unbranded and only associated by name.
 
-If you have any concerns or questions, please liase with us at [hello@revolt.chat](hello@revolt.chat).
+If you have any concerns or questions, please liase with us at [hello@revolt.chat](mailto:hello@revolt.chat).
 
 ## Guidelines for Third Party Instances
 

@@ -14,4 +14,6 @@ Revolt has really taught me **a lot** about different concepts and programming l
 
 ### Void of Competition
 
-Discord doesn't actually have much of viable competitors in its own specific genre of chat platform, we're just sort of filling the void. I think we have a pretty solid shot at making our mark.
+This isn't our primary goal, first and foremost it's just a project we enjoy working on but Discord doesn't actually have much of viable competitors in its own specific genre of chat platform, we're just sort of filling the void.
+
+I think all things considered, we have a pretty solid shot at making our mark.

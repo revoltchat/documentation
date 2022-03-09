@@ -21,8 +21,6 @@ We don't think federation is beneficial to Revolt and would actively hinder our 
 In terms of technical reasons:
 - We don't have the manpower or resources to implement federation into our protocol.
 - It would prove to be difficult to adopt our protocol to work in a federated style.
-- It does not let us guarantee the security and safety of our users.
-- It does not let us guarantee real-time communication.
 
 Some of these points are explained in-depth below.
 

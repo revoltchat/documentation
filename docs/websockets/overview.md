@@ -17,3 +17,9 @@ You can find the address of the WS server [from the API](/api/#tag/Core/paths/~1
 You can specifically tell the server that you want to operate in `json` or `msgpack` mode by connecting to the appropriate address.
 
 For example, `wss://ws.revolt.chat?format=msgpack` will allow you to communicate in binary msgpack formatted packets.
+
+:::caution
+
+The events system is due to receive some minor updates to typings and the connection strategy, keep up to date by joining the [Revolt Lounge](https://rvlt.gg/Testers).
+
+:::

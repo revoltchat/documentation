@@ -263,3 +263,5 @@ You can use emoji in your messages. This allows you to express yourself in a mor
 | ![🥰](https://static.revolt.chat/emoji/mutant/1f970.svg?rev=3) | :smiling_face_with_three_hearts<!---->: |
 
 You can see the full list of emoji shortcodes using auto-completion - simply start typing with a `:`.
+
+You can see the full list of custom global emojis [here](https://dl.insrt.uk/projects/revolt/).

@@ -10,15 +10,15 @@ To get started, you should have:
 
 You may authenticate in one of two ways:
 - Include credentials in the connection URL, see [Query Parameters](#query-parameters).
-- Sending an [Authenticate](/websockets/events#authenticate) event to the server.
+- Sending an [Authenticate](/stack/bonfire/events#authenticate) event to the server.
 
-You should listen out for [Error](/websockets/events#error) events to find out if your credentials are incorrect or if something goes wrong here.
+You should listen out for [Error](/stack/bonfire/events#error) events to find out if your credentials are incorrect or if something goes wrong here.
 
-After authenticating, the server will respond with [Authenticated](/websockets/events#authenticated) then it will send a [Ready](/websockets/events#ready) event containing useful data.
+After authenticating, the server will respond with [Authenticated](/stack/bonfire/events#authenticated) then it will send a [Ready](/stack/bonfire/events#ready) event containing useful data.
 
 The server will now start sending relevant events as they come in.
 
-You should [Ping](/websockets/events#ping) the server every 10 to 30 seconds to prevent your connection being dropped.
+You should [Ping](/stack/bonfire/events#ping) the server every 10 to 30 seconds to prevent your connection being dropped.
 
 ## Query Parameters
 

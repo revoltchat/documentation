@@ -6,7 +6,7 @@ sidebar_position: 2
 
 :::caution
 
-This article expects prior knowledge of federation, [learn more about it here](https://matrix.org/faq/#what-does-federated-mean%3F).
+This article expects prior knowledge of federation - if you're new to the concept, [learn more here](https://matrix.org/faq/#what-does-federated-mean%3F).
 
 In this case, we are talking about letting users send messages and join channels on other servers.
 
@@ -20,7 +20,7 @@ We don't think federation is beneficial to Revolt and would actively hinder our 
 
 In terms of technical reasons:
 - We don't have the manpower or resources to implement federation into our protocol.
-- It would prove to be difficult to adopt our protocol to work in a federated style.
+- It would be difficult to adopt our protocol to work with federation.
 
 Some of these points are explained in-depth below.
 
@@ -38,8 +38,8 @@ Ultimately, it's not worth it for us to build federation in if it's not feasible
 
 ### Time
 
-The Revolt team currently comprises of mainly students (18 to 20 years old), and the majority of the project organisation and work is being done by one person (insert). We do not have the manpower to build anything like this out.
+The Revolt team currently consists mostly of students (18-20 years old), and the majority of the project organisation and work is being done by one person (Insert). We do not have the manpower to build anything like this out.
 
-To quote myself from earlier:
+To quote myself from a previous version of this document:
 
 > I have just started my first year at university. I do not physically have the time to even consider planning out federation, and it would likely require a complete rewrite of everything just due to the nature of how it has been designed. I want to get Revolt to a useable state, and working on federation would get in the way of that goal.

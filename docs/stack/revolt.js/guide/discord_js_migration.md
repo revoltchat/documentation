@@ -28,15 +28,15 @@ Even if you're already using ESM, take note - when running your bot, make sure t
 
 - `client.once("ready", () => { code })` should be replaced with `client.on("ready", async () => { code }`.
 
-- `client.login(botToken)` should be replaced with `client.loginBot(botToken)` (or, for selfbots, `client.useExistingToken(sessionToken)`).
+- `client.login(botToken)` should be replaced with `client.loginBot(botToken)` (or, for selfbots, `client.useExistingSession(sessionToken, user_id: "", name: "")`).
 
 - `client.guilds` should be replaced with `client.servers`.
 
 ## Messages
 
-- Unlike Discord.JS, messages may sometimes be [`SystemMessage`](https://github.com/revoltchat/api/blob/master/types/Channels.ts#L218-L228)s. You'll need to handle these - either by ignoring them (like this):
+- Unlike Discord.JS, messages may sometimes be [`SystemMessage`](https://github.com/revoltchat/api/blob/master/src/schema.ts#L1048-L1101)s. You'll need to handle these - either by ignoring them (like this):
 
-```js
+```ts
 if (typeof message.content !== "string") return;
 ```
 
@@ -44,7 +44,7 @@ if (typeof message.content !== "string") return;
 
 - Messages are not guaranteed to have channels. You'll mostly see this with `SystemMessages`. To prevent any issues, use optional chaining like this:
 
-```js
+```ts
 message.channel?.xyz
 ```
 

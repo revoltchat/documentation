@@ -14,4 +14,4 @@ All of these have been written from the perspective of the lead developer.
 - [4. How do you pronounce "Revolt" and "Revite"?](/faq/pronounce)
 - [5. What badges are available on Revolt?](/faq/badges)
 - [6. What can I do with Revolt?](/faq/usage) (limitations with brand + self-hosting)
-- [7. How to get verified?](/faq/verification)
+- [7. How do I get my server/bot verified?](/faq/verification)

@@ -6,18 +6,18 @@ slug: /plugin-api
 # Plugin API
 
 :::warning
-The Plugin API is very powerful, you should tread carefully.
+The Plugin API is very powerful. **Tread carefully.**
 
-Zero guarantees or sandboxes are provided. Your code is run as-is.
+**Zero guarantees or sandboxes are provided.** Your code is run as-is.
 :::
 
-This document details the very experimental plugin API available in [revite](https://github.com/revoltchat/revite).
+This document details the very experimental plugin API available in [Revite](https://github.com/revoltchat/revite).
 
 This is more or less a proof of concept but can be used to achieve some simple client modifications.
 
 ## Plugin Manifest
 
-Below is the specification for revision 1 of the plugin API, currently `format` is not enforced but you should set it to `1` to avoid future breakage.
+Below is the specification for revision 1 of the plugin API. The `format` parameter is not currently enforced but you should set it to `1` to avoid future breakage.
 
 ```typescript
 type Plugin = {
@@ -28,6 +28,8 @@ type Plugin = {
 
     /**
      * Semver Version String
+     * 
+     * This is the version of the plugin.
      */
     version: string;
 
@@ -41,14 +43,14 @@ type Plugin = {
     /**
      * Plugin Id
      *
-     * This should be a valid URL slug, i.e. cool-plugin.
+     * This should be a valid URL slug, e.g. cool-plugin.
      */
     id: string;
 
     /**
      * Entrypoint
      *
-     * Valid Javascript code, must be function which returns object.
+     * Valid Javascript code. It must be a function which returns a object.
      *
      * ```typescript
      * function (state: State) {
@@ -62,7 +64,7 @@ type Plugin = {
     entrypoint: string;
 
     /**
-     * Whether this plugin is enabled
+     * Whether this plugin is enabled.
      *
      * @default true
      */
@@ -88,7 +90,7 @@ An example plugin:
 }
 ```
 
-## Using Plugin API
+## Using the Plugin API
 
 To begin, you can load plugins using the global plugin manager at `state.plugins`.
 
@@ -96,7 +98,7 @@ Open the developer console and run:
 
 ```javascript
 state.plugins.load({ ... });
-// Where [...] is your plugin manifest as described above.
+// ...where [...] is your plugin manifest as described above.
 ```
 
 ## Plugin API

@@ -1,6 +1,5 @@
 ---
 sidebar_position: 1
-slug: /revolt_js_guide
 ---
 
 # Overview
@@ -9,4 +8,4 @@ This is a guide for Revolt.js, the official JavaScript API wrapper for Revolt. T
 
 You can find its GitHub repo [here](https://github.com/revoltchat/revolt.js) and its NPM listing [here](https://npmjs.com/package/revolt.js).
 
-- [Moving from Discord.JS](/revolt_js_guide/discord_js_migration)
+- [Moving from Discord.JS](discord_js_migration)

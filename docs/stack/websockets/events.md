@@ -82,6 +82,17 @@ The server has authenticated your connection and you will shortly start receivin
 }
 ```
 
+### Bulk
+
+Several events have been sent, process each item of `v` as its own event.
+
+```json
+{
+    "type": "Bulk",
+    "v": [...]
+}
+```
+
 ### Pong
 
 Ping response from the server.
@@ -125,11 +136,27 @@ Message edited or otherwise updated.
 {
     "type": "MessageUpdate",
     "id": "{message_id}",
+    "channel": "{channel_id}",
     "data": {..}
 }
 ```
 
 - `data` field contains a partial Message object.
+
+### MessageAppend
+
+Message has data being appended to it.
+
+```json
+{
+    "type": "MessageAppend",
+    "id": "{message_id}",
+    "channel": "{channel_id}",
+    "append": {
+        "embeds"?: [...]
+    }
+}
+```
 
 ### MessageDelete
 
@@ -163,12 +190,12 @@ Channel details updated.
     "type": "ChannelUpdate",
     "id": "{channel_id}",
     "data": {..},
-    "clear": "{field}"
+    "clear": ["{field}", ...]
 }
 ```
 
 - `data` field contains a partial Channel object.
-- `clear` is an optional field which specifies an optional object field to remove, one of:
+- `{field}` is a field to remove, one of:
   - `Icon`
   - `Description`
 
@@ -244,6 +271,17 @@ You have acknowledged new messages in this channel up to this message ID.
 }
 ```
 
+### ServerCreate
+
+Server created, the event object has the same schema as the SERVER object in the API with the addition of an event type.
+
+```json
+{
+    "type": "ServerCreate",
+    [..]
+}
+```
+
 ### ServerUpdate
 
 Server details updated.
@@ -253,12 +291,12 @@ Server details updated.
     "type": "ServerUpdate",
     "id": "{server_id}",
     "data": {..},
-    "clear": "{field}"
+    "clear": ["{field}", ...]
 }
 ```
 
 - `data` field contains a partial Server object.
-- `clear` is an optional field which specifies an optional object field to remove, one of:
+- `{field}` is a field to remove, one of:
   - `Icon`
   - `Banner`
   - `Description`
@@ -286,12 +324,12 @@ Server member details updated.
         "user": "{user_id}"
     },
     "data": {..},
-    "clear": "{field}"
+    "clear": ["{field}", ...]
 }
 ```
 
 - `data` field contains a partial Server Member object.
-- `clear` is an optional field which specifies an optional object field to remove, one of:
+- `{field}` is a field to remove, one of:
   - `Nickname`
   - `Avatar`
 
@@ -329,12 +367,12 @@ Server role has been updated or created.
     "id": "{server_id}",
     "role_id": "{role_id}",
     "data": {..},
-    "clear": "{field}"
+    "clear": ["{field}", ...]
 }
 ```
 
 - `data` field contains a partial Server Role object.
-- `clear` is an optional field which specifies an optional object field to remove, one of:
+- `clear` is a field to remove, one of:
   - `Colour`
 
 ### ServerRoleDelete
@@ -358,12 +396,12 @@ User has been updated.
     "type": "UserUpdate",
     "id": "{user_id}",
     "data": {..},
-    "clear": "{field}"
+    "clear": ["{field}", ...]
 }
 ```
 
 - `data` field contains a partial User object.
-- `clear` is an optional field which specifies an optional object field to remove, one of:
+- `clear` is a field to remove, one of:
   - `ProfileContent`
   - `ProfileBackground`
   - `StatusText`

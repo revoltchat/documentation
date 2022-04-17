@@ -8,6 +8,10 @@ Learn how to quickly get started with the Revolt stack and contribute to the pro
 
 If you are not a developer, please see the [How To Help](/#how-to-help) section on the home page.
 
+:::caution
+You may be tempted to skip steps, but please go in order so you definitely do not miss anything.
+:::
+
 ## 1. Read before continuing
 
 The current contribution guidelines are [here](https://github.com/revoltchat/revolt/discussions/282#discussion-3777997).<br/>Please **make sure to read and commit to these** before starting to make any changes.
@@ -24,14 +28,28 @@ The Revolt stack is quite small, fragmented and easy to run which comes at the c
 
 - A modern multi-core CPU for Rust compilation - Ryzens are great for this job.
 - About 30GB of free disk space to ensure everything can be installed and built.
-- At minimum 12GB of free memory, I recommend having at least 16GB of system memory:
+
+  You may want to run `cargo clean` in project folders frequently if you do not have much.
+- At **minimum** 16GB of free memory:
   - `500MB` to run the Revolt stack
-  - `8GB` to run Visual Studio Code (includes rust-analyzer's 5GB memory usage)
+  - Between `10GB` and `12GB` to run Visual Studio Code (includes rust-analyzer)
   - `2GB` to run Chromium (conservative estimate)
 
-:::caution note
+:::warning Important!
 
-These do not apply if you're just working on Revite (the web app) and/or Revolt Desktop. You'll probably be fine with 2GB of free memory or less.
+These do not apply if you're just working on Revite (the web app) and/or Revolt Desktop.
+
+You'll probably be fine with 2GB of free memory or less.
+
+:::
+
+:::caution
+
+Keep in mind, the **free memory** recommendation is specifically about **free memory**, you should have more to buffer for any applications you use such as: Communications, Browser, Music Player, etc.
+
+If you have around `24GB` and especially around `16GB` of memory, you should be using Linux with swap enabled or else you'll find yourself running out frequently.
+
+Ideal machines for working with the full stack have `32GB` or more of memory to buffer for the stack and other apps.
 
 :::
 

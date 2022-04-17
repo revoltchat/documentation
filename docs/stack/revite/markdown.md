@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 slug: /markdown
 ---
 # Markdown Reference  
@@ -28,7 +28,7 @@ You can use code blocks for text that needs to be easily copied, such as code.
 
 :::note This is how it looks on Revolt:
 
-![An example of a single-line code block.](./assets/markdown/code-block-single.png)
+![An example of a single-line code block.](../../assets/markdown/code-block-single.png)
   
 :::
 
@@ -61,7 +61,7 @@ let x = "This is a multi-line code block, with the language set to JS"
 
 :::note This is how it looks on Revolt:
 
-![An example of multi-line code blocks.](./assets/markdown/code-block-multiple.png)  
+![An example of multi-line code blocks.](../../assets/markdown/code-block-multiple.png)  
   
 :::
 
@@ -240,7 +240,7 @@ See [KaTeX's documentation](https://katex.org/docs/supported.html) for more info
 
 You can display timestamps in your messages. The format requires you to get the time as a Unix timestamp. You can do this with online services like [unixtimestamp.com](https://www.unixtimestamp.com/).
 
-![An embedded timestamp in a message.](./assets/markdown/timestamps.png)
+![An embedded timestamp in a message.](../../assets/markdown/timestamps.png)
 
 | Style                               | Markdown           |
 |-------------------------------------|--------------------|

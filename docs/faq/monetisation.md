@@ -16,5 +16,5 @@ To start answering this question:
 Now you may be asking how will Revolt be funded?
 - We have a variety of monetisation ideas lined up internally, with these, it is **not my intention** for us to paywall features and I find it unlikely we would ever do that considering it would contradict what we're trying to achieve.<br/>
 - We have amassed a significant amount of money from donations alone (~ £2k).
-- Given the rate that we receive and expend money, it is unlikely we will suffer growing pains in the forseeable future, we have a lot of room to grow in terms of operating costs.
+- Given the rate that we receive and spend money, it is unlikely we will suffer growing pains in the foreseeable future, we have a lot of room to grow in terms of operating costs.
 - Given everything I've seen so far, it's likely some of the monetisation strategies we thought of are likely to succeed, some will also allow us to support community members who create awesome things.

@@ -37,10 +37,9 @@ Additional variables are available from [redis-kiss](https://github.com/insertis
 | `REVOLT_SMTP_PASSWORD` | SMTP Password | Empty |
 | `REVOLT_SMTP_FROM` | SMTP From Address | Empty |
 | `REVOLT_MAX_GROUP_SIZE` | Maximum number of users in group | `50` |
-| `REVOLT_MAX_BOT_COUNT` | Maximum number of users in group | `5` |
-| `REVOLT_MAX_EMBED_COUNT` | Maximum number of users in group | `5` |
-| `REVOLT_MAX_SERVER_COUNT` | Maximum number of users in group | `100` |
-| `REVOLT_EARLY_ADOPTER_BADGE` | Maximum number of users in group | `0` |
+| `REVOLT_MAX_BOT_COUNT` | Maximum number of bots that can be owned by a user | `5` |
+| `REVOLT_MAX_EMBED_COUNT` | Maximum number of embeds a user can send at once | `5` |
+| `REVOLT_MAX_SERVER_COUNT` | Maximum number of servers a user can be in | `100` |
 
 :::warning
 These variables are likely to change as variables are moved into quark.

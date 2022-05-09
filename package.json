@@ -24,6 +24,7 @@
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-player": "^2.10.1",
     "redocusaurus": "^0.7.0",
     "rehype-katex": "4",
     "remark-math": "3",

@@ -1,0 +1,32 @@
+---
+sidebar_position: 3
+slug: /qol
+---
+
+import ReactPlayer from 'react-player';
+import sed from '../../assets/qol/sed-replacement.mp4';
+import collapse from '../../assets/qol/collapse-channels.png';
+
+# Quality of Life Features
+
+This page documents lesser known quality of life features available on Revolt.
+
+## sed Replacement
+
+You can do sed replacement with messages by sending a message in the format as follows:
+
+```
+s/{regex}/{replacement}(/{flags})
+```
+
+- `{regex}`: any valid regex expression
+- `{replacement}`: what to replaced matched substring with
+- `{flags}`: optionally, flags to use for the regex
+
+<ReactPlayer loading="lazy" playing loop url={sed} style={{ margin: 'auto' }} />
+
+## Collapsable Channels List
+
+You can hide the left side channels list by pressing on the channel icon.
+
+<img loading="lazy" src={collapse} style={{ display: 'block', margin: 'auto', maxWidth: '640px' }} />

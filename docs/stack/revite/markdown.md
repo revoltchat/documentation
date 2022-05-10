@@ -109,15 +109,6 @@ You need to put an empty line after every Block Quote to signify the end of the 
 
 :::
 
-## Superscript and Subscript
-
-You can make a portion of text appear higher up or higher down with superscript and subscript.
-
-| Style          | Markdown |
-|----------------|----------|
-| H<sub>2</sub>O | H~2~0    |
-| CO<sup>2</sup> | CO^2^    |
-
 ## Spoilers
 
 You can hide spoilers using spoiler tags.  

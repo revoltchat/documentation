@@ -12,6 +12,12 @@ Please remember that if you are self-hosting Revolt, you are still:
 [Please read this article for more information.](/faq/usage)
 :::
 
+## What is a third-party instance?
+
+A third-party instance is one that is not associated with the Revolt project or platform itself ("revolt.chat").
+
+You cannot use your existing Revolt login on third-party instances and must create a new account if you wish to use it.
+
 ## How to customise the client?
 
 Currently, this is not entirely straightforward, my recommendation is to just simply fork the client and modify the `assets_default` folder as necessary. Reminder: the client is licensed under AGPLv3 so you must publish your modified client source and provide users with a way to access it.

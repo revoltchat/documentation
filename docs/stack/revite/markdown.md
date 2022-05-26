@@ -215,16 +215,16 @@ You can create lists in your messages, such as unordered lists (`*`, `+`, `-`) a
 
 You can use KaTeX to render math and some other advanced markup in your messages.
 
-| Style                                                                    | KaTeX                                                                     |
-|--------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| $x^2$                                                                    | \$x^2\$                                                                   |
-| $\sin(x)$                                                                | \$\sin(x)\$                                                               |
-| $\frac{x}{y}$                                                            | \$\frac{x}{y}\$                                                           |
-| $\sqrt{x^2}$                                                             | \$\sqrt{x^2}\$                                                            |
-| $\sum_{i=1}^n a_i$                                                       | \$\sum_{i=1}^n a_i\$                                                      |
-| $\lim_{x \to \infty}$                                                    | \$\lim_{x \to \infty}\$                                                   |
-| $\color{red}\textsf{Red Text}$                                           | \$\color{red}\textsf{Red Text}\$                                          |
-| $\colorbox{red}{{\color{white}\textsf{White Text with Red Background}}}$ | \$\colorbox{red}{{\color{white}\textsf{White Text with Red Background}}}$ |
+| Style                                                                    | KaTeX                                                                      |
+|--------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| $x^2$                                                                    | \$x^2\$                                                                    |
+| $\sin(x)$                                                                | \$\sin(x)\$                                                                |
+| $\frac{x}{y}$                                                            | \$\frac{x}{y}\$                                                            |
+| $\sqrt{x^2}$                                                             | \$\sqrt{x^2}\$                                                             |
+| $\sum_{i=1}^n a_i$                                                       | \$\sum_{i=1}^n a_i\$                                                       |
+| $\lim_{x \to \infty}$                                                    | \$\lim_{x \to \infty}\$                                                    |
+| $\color{red}\textsf{Red Text}$                                           | \$\color{red}\textsf{Red Text}\$                                           |
+| $\colorbox{red}{{\color{white}\textsf{White Text with Red Background}}}$ | \$\colorbox{red}{{\color{white}\textsf{White Text with Red Background}}}\$ |
 
 See [KaTeX's documentation](https://katex.org/docs/supported.html) for more information.
 

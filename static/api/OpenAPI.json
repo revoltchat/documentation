@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Revolt API",
-    "description": "User-first privacy focused chat platform.",
+    "description": "Open source user-first chat platform.",
     "termsOfService": "https://revolt.chat/terms",
     "contact": {
       "name": "Revolt Support",
@@ -13,7 +13,7 @@
       "name": "AGPLv3",
       "url": "https://github.com/revoltchat/delta/blob/master/LICENSE"
     },
-    "version": "0.5.3-rc.1"
+    "version": "0.5.3-7"
   },
   "servers": [
     {
@@ -90,7 +90,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -135,7 +135,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -182,7 +182,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -229,10 +229,10 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           },
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -312,7 +312,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -352,7 +352,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -399,7 +399,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -446,26 +446,26 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
     },
-    "/users/{username}/friend": {
+    "/users/{target}/friend": {
       "put": {
         "tags": [
           "Relationships"
         ],
-        "summary": "Send Friend Request / Accept Request",
-        "description": "Send a friend request to another user or accept another user's friend request.",
+        "summary": "Accept Friend Request",
+        "description": "Accept another user's friend request.",
         "operationId": "add_friend_req",
         "parameters": [
           {
-            "name": "username",
+            "name": "target",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "$ref": "#/components/schemas/Id"
             }
           }
         ],
@@ -493,12 +493,10 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
-      }
-    },
-    "/users/{target}/friend": {
+      },
       "delete": {
         "tags": [
           "Relationships"
@@ -540,7 +538,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -587,7 +585,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -632,7 +630,54 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/users/friend": {
+      "post": {
+        "tags": [
+          "Relationships"
+        ],
+        "summary": "Send Friend Request",
+        "description": "Send a friend request to another user.",
+        "operationId": "send_friend_request_req",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataSendFriendRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Session Token": []
           }
         ]
       }
@@ -679,7 +724,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -723,7 +768,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "Session Token": []
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -769,7 +819,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -816,7 +866,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -854,7 +904,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -909,7 +959,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -946,7 +996,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -994,7 +1044,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1041,7 +1091,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -1079,7 +1129,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -1134,7 +1184,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1184,7 +1234,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1231,7 +1281,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1347,7 +1397,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -1410,7 +1460,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1467,7 +1517,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1517,7 +1567,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1572,7 +1622,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -1618,7 +1668,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -1681,7 +1731,57 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/channels/{target}/messages/bulk": {
+      "delete": {
+        "tags": [
+          "Messaging"
+        ],
+        "summary": "Bulk Delete Messages",
+        "description": "Delete multiple messages you've sent or one you have permission to delete.\n\nThis will always require `ManageMessages` permission regardless of whether you own the message or not.\n\nMessages must have been sent within the past 1 week.",
+        "operationId": "message_bulk_delete_req",
+        "parameters": [
+          {
+            "name": "target",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OptionsBulkDelete"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "Session Token": []
           }
         ]
       }
@@ -1728,7 +1828,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1776,7 +1876,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -1822,12 +1922,12 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
     },
-    "/channels/{_target}/join_call": {
+    "/channels/{target}/join_call": {
       "post": {
         "tags": [
           "Voice"
@@ -1837,7 +1937,7 @@
         "operationId": "voice_join_req",
         "parameters": [
           {
-            "name": "_target",
+            "name": "target",
             "in": "path",
             "required": true,
             "schema": {
@@ -1869,7 +1969,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1934,7 +2034,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -1991,7 +2091,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2038,7 +2138,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2085,7 +2185,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -2123,7 +2223,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -2178,7 +2278,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2218,7 +2318,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2275,7 +2375,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2295,6 +2395,16 @@
             "required": true,
             "schema": {
               "$ref": "#/components/schemas/Id"
+            }
+          },
+          {
+            "name": "exclude_offline",
+            "in": "query",
+            "description": "Whether to exclude offline users",
+            "schema": {
+              "description": "Whether to exclude offline users",
+              "type": "boolean",
+              "nullable": true
             }
           }
         ],
@@ -2322,7 +2432,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2377,7 +2487,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -2423,7 +2533,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2488,7 +2598,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2553,7 +2663,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -2599,7 +2709,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2646,7 +2756,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2696,7 +2806,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2753,7 +2863,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2801,7 +2911,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -2864,7 +2974,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2929,7 +3039,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -2986,7 +3096,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3073,7 +3183,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -3111,7 +3221,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3186,6 +3296,72 @@
         }
       }
     },
+    "/auth/account/delete": {
+      "put": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Confirm Account Deletion",
+        "description": "Schedule an account for deletion by confirming the received token.",
+        "operationId": "confirm_deletion_confirm_deletion",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataAccountDeletion"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Delete Account",
+        "description": "Request to have an account deleted.",
+        "operationId": "delete_account_delete_account",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "Valid MFA Ticket": []
+          },
+          {
+            "Session Token": []
+          }
+        ]
+      }
+    },
     "/auth/account/": {
       "get": {
         "tags": [
@@ -3218,7 +3394,40 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/auth/account/disable": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Disable Account",
+        "description": "Disable an account.",
+        "operationId": "disable_account_disable_account",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "Valid MFA Ticket": []
+          },
+          {
+            "Session Token": []
           }
         ]
       }
@@ -3258,7 +3467,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3298,7 +3507,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3473,7 +3682,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3513,7 +3722,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -3551,7 +3760,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3591,7 +3800,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       },
@@ -3638,7 +3847,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Session"
+                  "$ref": "#/components/schemas/SessionInfo"
                 }
               }
             }
@@ -3646,7 +3855,317 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/auth/mfa/ticket": {
+      "put": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Create MFA ticket",
+        "description": "Create a new MFA ticket or validate an existing one.",
+        "operationId": "create_ticket_create_ticket",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MFAResponse"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MFATicket"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Session Token": []
+          },
+          {
+            "Unvalidated MFA Ticket": []
+          }
+        ]
+      }
+    },
+    "/auth/mfa/": {
+      "get": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "MFA Status",
+        "description": "Fetch MFA status of an account.",
+        "operationId": "fetch_status_fetch_status",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MultiFactorStatus"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/auth/mfa/recovery": {
+      "post": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Fetch Recovery Codes",
+        "description": "Fetch recovery codes for an account.",
+        "operationId": "fetch_recovery_fetch_recovery",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Valid MFA Ticket": []
+          },
+          {
+            "Session Token": []
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Generate Recovery Codes",
+        "description": "Re-generate recovery codes for an account.",
+        "operationId": "generate_recovery_generate_recovery",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Valid MFA Ticket": []
+          },
+          {
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/auth/mfa/methods": {
+      "get": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Get MFA Methods",
+        "description": "Fetch available MFA methods.",
+        "operationId": "get_mfa_methods_get_mfa_methods",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MFAMethod"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Session Token": []
+          }
+        ]
+      }
+    },
+    "/auth/mfa/totp": {
+      "put": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Enable TOTP 2FA",
+        "description": "Generate a new secret for TOTP.",
+        "operationId": "totp_enable_totp_enable",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MFAResponse"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "Session Token": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Generate TOTP Secret",
+        "description": "Generate a new secret for TOTP.",
+        "operationId": "totp_generate_secret_totp_generate_secret",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseTotpSecret"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "Valid MFA Ticket": []
+          },
+          {
+            "Session Token": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "MFA"
+        ],
+        "summary": "Disable TOTP 2FA",
+        "description": "Disable TOTP 2FA for an account.",
+        "operationId": "totp_disable_totp_disable",
+        "responses": {
+          "default": {
+            "description": "An error occurred.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Success"
+          }
+        },
+        "security": [
+          {
+            "Valid MFA Ticket": []
+          },
+          {
+            "Session Token": []
           }
         ]
       }
@@ -3673,10 +4192,10 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           },
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3716,10 +4235,10 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           },
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3759,7 +4278,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3789,7 +4308,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3850,7 +4369,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3906,7 +4425,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -3946,7 +4465,7 @@
         },
         "security": [
           {
-            "Api Key": []
+            "Session Token": []
           }
         ]
       }
@@ -4140,6 +4659,7 @@
         ]
       },
       "UserPermission": {
+        "description": "User permission definitions",
         "type": "string",
         "enum": [
           "Access",
@@ -4150,6 +4670,7 @@
       },
       "Error": {
         "title": "Error",
+        "description": "Possible API Errors",
         "oneOf": [
           {
             "description": "This error was not labeled :(",
@@ -4190,6 +4711,20 @@
                 "type": "string",
                 "enum": [
                   "UsernameTaken"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "InvalidUsername"
                 ]
               }
             }
@@ -4833,6 +5368,10 @@
             "format": "int32",
             "nullable": true
           },
+          "privileged": {
+            "description": "Whether this user is privileged",
+            "type": "boolean"
+          },
           "bot": {
             "description": "Bot information",
             "allOf": [
@@ -5209,7 +5748,7 @@
             "type": "string",
             "maxLength": 32,
             "minLength": 2,
-            "pattern": "^[a-zA-Z0-9_.]+$"
+            "pattern": "^[^\\u200BА-Яа-яΑ-Ωα-ω]+$"
           },
           "password": {
             "description": "Current account password",
@@ -5504,12 +6043,6 @@
             "description": "Disallow bit flags",
             "type": "integer",
             "format": "int64"
-          },
-          "r": {
-            "description": "Ranking of this override",
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
           }
         }
       },
@@ -5534,6 +6067,18 @@
             "items": {
               "type": "string"
             }
+          }
+        }
+      },
+      "DataSendFriendRequest": {
+        "title": "User Lookup Information",
+        "type": "object",
+        "required": [
+          "username"
+        ],
+        "properties": {
+          "username": {
+            "type": "string"
           }
         }
       },
@@ -5575,6 +6120,22 @@
             "description": "Reserved; URL for handling interactions",
             "type": "string",
             "nullable": true
+          },
+          "terms_of_service_url": {
+            "description": "URL for terms of service",
+            "type": "string",
+            "nullable": true
+          },
+          "privacy_policy_url": {
+            "description": "URL for privacy policy",
+            "type": "string",
+            "nullable": true
+          },
+          "flags": {
+            "description": "Enum of bot flags",
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         }
       },
@@ -5590,7 +6151,7 @@
             "type": "string",
             "maxLength": 32,
             "minLength": 2,
-            "pattern": "^[a-zA-Z0-9_.]+$"
+            "pattern": "^[^\\u200BА-Яа-яΑ-Ωα-ω]+$"
           }
         }
       },
@@ -5717,7 +6278,7 @@
             "type": "string",
             "maxLength": 32,
             "minLength": 2,
-            "pattern": "^[a-zA-Z0-9_.]+$",
+            "pattern": "^[^\\u200BА-Яа-яΑ-Ωα-ω]+$",
             "nullable": true
           },
           "public": {
@@ -5881,8 +6442,7 @@
         "required": [
           "_id",
           "author",
-          "channel",
-          "content"
+          "channel"
         ],
         "properties": {
           "_id": {
@@ -5904,11 +6464,17 @@
           },
           "content": {
             "description": "Message content",
+            "type": "string",
+            "nullable": true
+          },
+          "system": {
+            "description": "System message",
             "allOf": [
               {
-                "$ref": "#/components/schemas/Content"
+                "$ref": "#/components/schemas/SystemMessage"
               }
-            ]
+            ],
+            "nullable": true
           },
           "attachments": {
             "description": "Array of attachments",
@@ -5961,23 +6527,6 @@
             "nullable": true
           }
         }
-      },
-      "Content": {
-        "description": "Untagged enum representing message content",
-        "anyOf": [
-          {
-            "description": "Message contains text content",
-            "type": "string"
-          },
-          {
-            "description": "Message is a system event",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/SystemMessage"
-              }
-            ]
-          }
-        ]
       },
       "SystemMessage": {
         "description": "Representation of a system event message",
@@ -6179,11 +6728,14 @@
       "ISO8601 Timestamp": {
         "description": "ISO8601 formatted timestamp",
         "type": "string",
+        "format": "date-time",
         "example": "1970-01-01T00:00:00Z"
       },
       "Embed": {
+        "description": "Embed",
         "oneOf": [
           {
+            "description": "Website metadata",
             "type": "object",
             "required": [
               "type"
@@ -6196,10 +6748,17 @@
                 ]
               },
               "url": {
+                "description": "Direct URL to web page",
+                "type": "string",
+                "nullable": true
+              },
+              "original_url": {
+                "description": "Original direct URL",
                 "type": "string",
                 "nullable": true
               },
               "special": {
+                "description": "Remote content",
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/Special"
@@ -6208,14 +6767,17 @@
                 "nullable": true
               },
               "title": {
+                "description": "Title of website",
                 "type": "string",
                 "nullable": true
               },
               "description": {
+                "description": "Description of website",
                 "type": "string",
                 "nullable": true
               },
               "image": {
+                "description": "Embedded image",
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/Image"
@@ -6224,6 +6786,7 @@
                 "nullable": true
               },
               "video": {
+                "description": "Embedded video",
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/Video"
@@ -6232,20 +6795,24 @@
                 "nullable": true
               },
               "site_name": {
+                "description": "Site name",
                 "type": "string",
                 "nullable": true
               },
               "icon_url": {
+                "description": "URL to site icon",
                 "type": "string",
                 "nullable": true
               },
               "colour": {
+                "description": "CSS Colour",
                 "type": "string",
                 "nullable": true
               }
             }
           },
           {
+            "description": "Image",
             "type": "object",
             "required": [
               "height",
@@ -6262,22 +6829,63 @@
                 ]
               },
               "url": {
+                "description": "URL to the original image",
                 "type": "string"
               },
               "width": {
+                "description": "Width of the image",
                 "type": "integer",
                 "format": "int"
               },
               "height": {
+                "description": "Height of the image",
                 "type": "integer",
                 "format": "int"
               },
               "size": {
-                "$ref": "#/components/schemas/ImageSize"
+                "description": "Positioning and size",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ImageSize"
+                  }
+                ]
               }
             }
           },
           {
+            "description": "Video",
+            "type": "object",
+            "required": [
+              "height",
+              "type",
+              "url",
+              "width"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Video"
+                ]
+              },
+              "url": {
+                "description": "URL to the original video",
+                "type": "string"
+              },
+              "width": {
+                "description": "Width of the video",
+                "type": "integer",
+                "format": "int"
+              },
+              "height": {
+                "description": "Height of the video",
+                "type": "integer",
+                "format": "int"
+              }
+            }
+          },
+          {
+            "description": "Text Embed",
             "type": "object",
             "required": [
               "type"
@@ -6290,22 +6898,27 @@
                 ]
               },
               "icon_url": {
+                "description": "URL to icon",
                 "type": "string",
                 "nullable": true
               },
               "url": {
+                "description": "URL for title",
                 "type": "string",
                 "nullable": true
               },
               "title": {
+                "description": "Title of text embed",
                 "type": "string",
                 "nullable": true
               },
               "description": {
+                "description": "Description of text embed",
                 "type": "string",
                 "nullable": true
               },
               "media": {
+                "description": "ID of uploaded autumn file",
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/File"
@@ -6314,6 +6927,7 @@
                 "nullable": true
               },
               "colour": {
+                "description": "CSS Colour",
                 "type": "string",
                 "nullable": true
               }
@@ -6336,8 +6950,10 @@
         ]
       },
       "Special": {
+        "description": "Information about special remote content",
         "oneOf": [
           {
+            "description": "No remote content",
             "type": "object",
             "required": [
               "type"
@@ -6352,6 +6968,22 @@
             }
           },
           {
+            "description": "Content hint that this contains a GIF\n\nUse metadata to find video or image to play",
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "GIF"
+                ]
+              }
+            }
+          },
+          {
+            "description": "YouTube video",
             "type": "object",
             "required": [
               "id",
@@ -6374,6 +7006,30 @@
             }
           },
           {
+            "description": "Lightspeed.tv stream",
+            "type": "object",
+            "required": [
+              "content_type",
+              "id",
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Lightspeed"
+                ]
+              },
+              "content_type": {
+                "$ref": "#/components/schemas/LightspeedType"
+              },
+              "id": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "description": "Twitch stream or clip",
             "type": "object",
             "required": [
               "content_type",
@@ -6396,6 +7052,7 @@
             }
           },
           {
+            "description": "Spotify track",
             "type": "object",
             "required": [
               "content_type",
@@ -6418,6 +7075,7 @@
             }
           },
           {
+            "description": "Soundcloud track",
             "type": "object",
             "required": [
               "type"
@@ -6432,6 +7090,7 @@
             }
           },
           {
+            "description": "Bandcamp track",
             "type": "object",
             "required": [
               "content_type",
@@ -6455,7 +7114,15 @@
           }
         ]
       },
+      "LightspeedType": {
+        "description": "Type of remote Lightspeed.tv content",
+        "type": "string",
+        "enum": [
+          "Channel"
+        ]
+      },
       "TwitchType": {
+        "description": "Type of remote Twitch content",
         "type": "string",
         "enum": [
           "Channel",
@@ -6464,6 +7131,7 @@
         ]
       },
       "BandcampType": {
+        "description": "Type of remote Bandcamp content",
         "type": "string",
         "enum": [
           "Album",
@@ -6471,6 +7139,7 @@
         ]
       },
       "Image": {
+        "description": "Image",
         "type": "object",
         "required": [
           "height",
@@ -6480,22 +7149,31 @@
         ],
         "properties": {
           "url": {
+            "description": "URL to the original image",
             "type": "string"
           },
           "width": {
+            "description": "Width of the image",
             "type": "integer",
             "format": "int"
           },
           "height": {
+            "description": "Height of the image",
             "type": "integer",
             "format": "int"
           },
           "size": {
-            "$ref": "#/components/schemas/ImageSize"
+            "description": "Positioning and size",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ImageSize"
+              }
+            ]
           }
         }
       },
       "ImageSize": {
+        "description": "Image positioning and size",
         "type": "string",
         "enum": [
           "Large",
@@ -6503,6 +7181,7 @@
         ]
       },
       "Video": {
+        "description": "Video",
         "type": "object",
         "required": [
           "height",
@@ -6511,13 +7190,16 @@
         ],
         "properties": {
           "url": {
+            "description": "URL to the original video",
             "type": "string"
           },
           "width": {
+            "description": "Width of the video",
             "type": "integer",
             "format": "int"
           },
           "height": {
+            "description": "Height of the video",
             "type": "integer",
             "format": "int"
           }
@@ -6545,9 +7227,6 @@
       },
       "DataMessageSend": {
         "type": "object",
-        "required": [
-          "content"
-        ],
         "properties": {
           "nonce": {
             "description": "Unique token to prevent duplicate message sending\n\n**This is deprecated and replaced by `Idempotency-Key`!**",
@@ -6558,7 +7237,8 @@
             "description": "Message content to send",
             "type": "string",
             "maxLength": 2000,
-            "minLength": 0
+            "minLength": 0,
+            "nullable": true
           },
           "attachments": {
             "description": "Attachments to include in message",
@@ -6858,6 +7538,24 @@
           }
         }
       },
+      "OptionsBulkDelete": {
+        "title": "Search Parameters",
+        "type": "object",
+        "required": [
+          "ids"
+        ],
+        "properties": {
+          "ids": {
+            "description": "Message IDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "minItems": 1
+          }
+        }
+      },
       "DataCreateGroup": {
         "title": "Group Data",
         "type": "object",
@@ -6944,12 +7642,6 @@
             "type": "integer",
             "format": "uint64",
             "minimum": 0.0
-          },
-          "rank": {
-            "description": "Ranking of this override",
-            "type": "integer",
-            "format": "int64",
-            "nullable": true
           }
         }
       },
@@ -7116,6 +7808,7 @@
         }
       },
       "Category": {
+        "description": "Channel category",
         "type": "object",
         "required": [
           "channels",
@@ -7124,16 +7817,19 @@
         ],
         "properties": {
           "id": {
+            "description": "Unique ID for this category",
             "type": "string",
             "maxLength": 32,
             "minLength": 1
           },
           "title": {
+            "description": "Title for this category",
             "type": "string",
             "maxLength": 32,
             "minLength": 1
           },
           "channels": {
+            "description": "Channels in this category",
             "type": "array",
             "items": {
               "type": "string"
@@ -7142,27 +7838,33 @@
         }
       },
       "SystemMessageChannels": {
+        "description": "System message channel assignments",
         "type": "object",
         "properties": {
           "user_joined": {
+            "description": "ID of channel to send user join messages in",
             "type": "string",
             "nullable": true
           },
           "user_left": {
+            "description": "ID of channel to send user left messages in",
             "type": "string",
             "nullable": true
           },
           "user_kicked": {
+            "description": "ID of channel to send user kicked messages in",
             "type": "string",
             "nullable": true
           },
           "user_banned": {
+            "description": "ID of channel to send user banned messages in",
             "type": "string",
             "nullable": true
           }
         }
       },
       "Role": {
+        "description": "Representation of a server role",
         "type": "object",
         "required": [
           "name",
@@ -7170,19 +7872,28 @@
         ],
         "properties": {
           "name": {
+            "description": "Role name",
             "type": "string"
           },
           "permissions": {
-            "$ref": "#/components/schemas/OverrideField"
+            "description": "Permissions available to this role",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OverrideField"
+              }
+            ]
           },
           "colour": {
+            "description": "Colour used for this role\n\nThis can be any valid CSS colour",
             "type": "string",
             "nullable": true
           },
           "hoist": {
+            "description": "Whether this role should be shown separately on the member sidebar",
             "type": "boolean"
           },
           "rank": {
+            "description": "Ranking of this role",
             "default": 0,
             "type": "integer",
             "format": "int64"
@@ -7783,6 +8494,303 @@
           }
         ]
       },
+      "RAuth Error": {
+        "title": "Error",
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "type",
+              "with"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "IncorrectData"
+                ]
+              },
+              "with": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "operation",
+              "type",
+              "with"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "DatabaseError"
+                ]
+              },
+              "operation": {
+                "type": "string"
+              },
+              "with": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "InternalError"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "OperationFailed"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "RenderFail"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "MissingHeaders"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "CaptchaFailed"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "InvalidSession"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "UnverifiedAccount"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "UnknownUser"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "EmailFailed"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "InvalidToken"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "MissingInvite"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "InvalidInvite"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "InvalidCredentials"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "CompromisedPassword"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "DisabledAccount"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Blacklisted"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "TotpAlreadyEnabled"
+                ]
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "type"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "DisallowedMFAMethod"
+                ]
+              }
+            }
+          }
+        ]
+      },
       "DataCreateAccount": {
         "title": "Account Data",
         "type": "object",
@@ -7826,6 +8834,19 @@
             "description": "Captcha verification code",
             "type": "string",
             "nullable": true
+          }
+        }
+      },
+      "DataAccountDeletion": {
+        "title": "Account Deletion Token",
+        "type": "object",
+        "required": [
+          "token"
+        ],
+        "properties": {
+          "token": {
+            "description": "Deletion token",
+            "type": "string"
           }
         }
       },
@@ -7919,8 +8940,10 @@
       "ResponseLogin": {
         "oneOf": [
           {
+            "description": "Session information",
             "type": "object",
             "required": [
+              "_id",
               "name",
               "result",
               "token",
@@ -7934,39 +8957,29 @@
                 ]
               },
               "_id": {
-                "type": "string",
-                "nullable": true
+                "description": "Unique Id",
+                "type": "string"
               },
               "user_id": {
+                "description": "User Id",
                 "type": "string"
               },
               "token": {
+                "description": "Session token",
                 "type": "string"
               },
               "name": {
+                "description": "Display name",
                 "type": "string"
               },
               "subscription": {
+                "description": "Web Push subscription",
                 "allOf": [
                   {
                     "$ref": "#/components/schemas/WebPushSubscription"
                   }
                 ],
                 "nullable": true
-              }
-            }
-          },
-          {
-            "type": "object",
-            "required": [
-              "result"
-            ],
-            "properties": {
-              "result": {
-                "type": "string",
-                "enum": [
-                  "EmailOTP"
-                ]
               }
             }
           },
@@ -7990,7 +9003,7 @@
               "allowed_methods": {
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/MFAMethod"
                 }
               }
             }
@@ -7998,6 +9011,7 @@
         ]
       },
       "WebPushSubscription": {
+        "description": "Web Push subscription",
         "type": "object",
         "required": [
           "auth",
@@ -8016,38 +9030,110 @@
           }
         }
       },
+      "MFAMethod": {
+        "description": "MFA method",
+        "type": "string",
+        "enum": [
+          "Password",
+          "Recovery",
+          "Totp"
+        ]
+      },
       "DataLogin": {
         "title": "Login Data",
-        "type": "object",
-        "required": [
-          "email"
-        ],
-        "properties": {
-          "email": {
-            "description": "Email",
-            "type": "string"
+        "anyOf": [
+          {
+            "type": "object",
+            "required": [
+              "email",
+              "password"
+            ],
+            "properties": {
+              "email": {
+                "description": "Email",
+                "type": "string"
+              },
+              "password": {
+                "description": "Password",
+                "type": "string"
+              },
+              "captcha": {
+                "description": "Captcha verification code",
+                "type": "string",
+                "nullable": true
+              },
+              "friendly_name": {
+                "description": "Friendly name used for the session",
+                "type": "string",
+                "nullable": true
+              }
+            }
           },
-          "password": {
-            "description": "Password",
-            "type": "string",
-            "nullable": true
-          },
-          "challenge": {
-            "description": "UN-USED: MFA challenge",
-            "type": "string",
-            "nullable": true
-          },
-          "friendly_name": {
-            "description": "Friendly name used for the session",
-            "type": "string",
-            "nullable": true
-          },
-          "captcha": {
-            "description": "Captcha verification code",
-            "type": "string",
-            "nullable": true
+          {
+            "type": "object",
+            "required": [
+              "mfa_response",
+              "mfa_ticket"
+            ],
+            "properties": {
+              "mfa_ticket": {
+                "description": "Unvalidated MFA ticket\n\nUsed to resolve the correct account",
+                "type": "string"
+              },
+              "mfa_response": {
+                "description": "Valid MFA response\n\nThis will take precedence over the `password` field where applicable",
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/MFAResponse"
+                  }
+                ]
+              },
+              "friendly_name": {
+                "description": "Friendly name used for the session",
+                "type": "string",
+                "nullable": true
+              }
+            }
           }
-        }
+        ]
+      },
+      "MFAResponse": {
+        "description": "MFA response",
+        "anyOf": [
+          {
+            "type": "object",
+            "required": [
+              "password"
+            ],
+            "properties": {
+              "password": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "recovery_code"
+            ],
+            "properties": {
+              "recovery_code": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "totp_code"
+            ],
+            "properties": {
+              "totp_code": {
+                "type": "string"
+              }
+            }
+          }
+        ]
       },
       "SessionInfo": {
         "type": "object",
@@ -8064,37 +9150,6 @@
           }
         }
       },
-      "Session": {
-        "type": "object",
-        "required": [
-          "name",
-          "token",
-          "user_id"
-        ],
-        "properties": {
-          "_id": {
-            "type": "string",
-            "nullable": true
-          },
-          "user_id": {
-            "type": "string"
-          },
-          "token": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "subscription": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/WebPushSubscription"
-              }
-            ],
-            "nullable": true
-          }
-        }
-      },
       "DataEditSession": {
         "title": "Edit Data",
         "type": "object",
@@ -8104,6 +9159,77 @@
         "properties": {
           "friendly_name": {
             "description": "Session friendly name",
+            "type": "string"
+          }
+        }
+      },
+      "MFATicket": {
+        "description": "Multi-factor auth ticket",
+        "type": "object",
+        "required": [
+          "_id",
+          "account_id",
+          "token",
+          "validated"
+        ],
+        "properties": {
+          "_id": {
+            "description": "Unique Id",
+            "type": "string"
+          },
+          "account_id": {
+            "description": "Account Id",
+            "type": "string"
+          },
+          "token": {
+            "description": "Unique Token",
+            "type": "string"
+          },
+          "validated": {
+            "description": "Whether this ticket has been validated",
+            "type": "boolean"
+          }
+        }
+      },
+      "MultiFactorStatus": {
+        "type": "object",
+        "required": [
+          "email_mfa",
+          "email_otp",
+          "recovery_active",
+          "security_key_mfa",
+          "totp_mfa",
+          "trusted_handover"
+        ],
+        "properties": {
+          "email_otp": {
+            "type": "boolean"
+          },
+          "trusted_handover": {
+            "type": "boolean"
+          },
+          "email_mfa": {
+            "type": "boolean"
+          },
+          "totp_mfa": {
+            "type": "boolean"
+          },
+          "security_key_mfa": {
+            "type": "boolean"
+          },
+          "recovery_active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ResponseTotpSecret": {
+        "title": "Totp Secret",
+        "type": "object",
+        "required": [
+          "secret"
+        ],
+        "properties": {
+          "secret": {
             "type": "string"
           }
         }
@@ -8133,7 +9259,7 @@
             "type": "string",
             "maxLength": 32,
             "minLength": 2,
-            "pattern": "^[a-zA-Z0-9_.]+$"
+            "pattern": "^[^\\u200BА-Яа-яΑ-Ωα-ω]+$"
           }
         }
       },
@@ -8203,10 +9329,22 @@
       }
     },
     "securitySchemes": {
-      "Api Key": {
-        "description": "Session Token",
+      "Session Token": {
+        "description": "Used to authenticate as a user.",
         "type": "apiKey",
         "name": "x-session-token",
+        "in": "header"
+      },
+      "Valid MFA Ticket": {
+        "description": "Used to authorise a request.",
+        "type": "apiKey",
+        "name": "x-mfa-ticket",
+        "in": "header"
+      },
+      "Unvalidated MFA Ticket": {
+        "description": "Used to authorise a request.",
+        "type": "apiKey",
+        "name": "x-mfa-ticket",
         "in": "header"
       }
     }
@@ -8270,7 +9408,8 @@
       "tags": [
         "Account",
         "Session",
-        "Onboarding"
+        "Onboarding",
+        "MFA"
       ]
     },
     {

@@ -1,3 +1,7 @@
+---
+slug: 20220608-friends-api-v2
+---
+
 # 20220608-1: Friends API v2
 
 To accomodate the new Unicode usernames, the existing add friend route is being split into two different routes:

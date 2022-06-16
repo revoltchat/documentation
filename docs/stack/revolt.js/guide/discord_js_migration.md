@@ -9,6 +9,8 @@ Before we begin, please note that **Revolt does not support interactions or slas
 
 ## The basics
 
+<!-- commented out as this *was* true but is no longer the case - if we decide to make the lib ESM-only again, uncomment/tweak this
+
 -  If you're not already using ESM for your Discord bot please note that unlike Discord.JS - which supports both CommonJS and ESM (see [here](https://nodejs.org/api/esm.html) for more info on the latter) - Revolt.js is an **ESM-only library**. This means you can't `require()` the library, and will instead need to import it like this:
 
 ```diff
@@ -16,11 +18,11 @@ Before we begin, please note that **Revolt does not support interactions or slas
 + import { Client } from "revolt.js";
 ```
 
-You'll also need to set the `type` field in your `package.json` to `module`, alongside other changes. See [this `node-fetch` issue](https://github.com/node-fetch/node-fetch/issues/1279) for more info on how to switch to ESM.
+You'll also need to set the `type` field in your `package.json` to `module`, alongside other changes. See [this `node-fetch` issue](https://github.com/node-fetch/node-fetch/issues/1279) for more info on how to switch to ESM. -->
 
 :::warning
 
-Even if you're already using ESM, take note - when running your bot, make sure to pass `--experimental-specifier-resolution=node` as a Node flag (for example, `node --experimental-specifier-resolution=node index.js`). **Revolt.js will not work if you do not pass this flag.**
+When running your bot, make sure to pass `--experimental-specifier-resolution=node` as a Node flag (for example, `node --experimental-specifier-resolution=node index.js`). **Revolt.js will not work if you do not pass this flag.**
 
 :::
 
@@ -34,10 +36,10 @@ Even if you're already using ESM, take note - when running your bot, make sure t
 
 ## Messages
 
-- Unlike Discord.JS, messages may sometimes be [`SystemMessage`](https://github.com/revoltchat/api/blob/master/src/schema.ts#L1048-L1101)s. You'll need to handle these - either by ignoring them (like this):
+- Unlike Discord.JS, messages may sometimes be `SystemMessage`s. As a result, the `content` property may be null, so you'll need to handle this - either by ignoring messages without any content (like this):
 
 ```ts
-if (typeof message.content !== "string") return;
+if (!message.content) return;
 ```
 
 - ...or by handling them separately (for example, if you're making a logging bot and want to log these events).
@@ -53,5 +55,3 @@ message.channel?.xyz
 #### Embeds
 
 - Embeds do not have fields - you should use bold text and newlines to acheive a similar effect.
-
-- You can't *directly* send an embed-only message - you have to specify the message content field. Fortunately, you can send an embed-only message by setting the content field to a space. The space won't be rendered, so you'll only see the embed in-app.

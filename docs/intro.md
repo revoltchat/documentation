@@ -8,10 +8,6 @@ slug: /
 
 Welcome to Revolt's documentation. Everything you need to contribute to Revolt, build apps or bots, or to learn more about the project can be found here.
 
-:::warning
-The documentation is currently up to date with v0.5.3 of the Revolt API which has **not been released to production yet**. There may be some discrepancies.
-:::
-
 ## How To Help
 
 You can contribute to Revolt in a variety of ways:

@@ -130,8 +130,8 @@ module.exports = {
         debug: Boolean(process.env.DEBUG || process.env.CI),
         specs: [
           {
-            specUrl: 'https://api.revolt.chat/openapi.json',
-            routePath: '/api/',
+            spec: 'https://api.revolt.chat/openapi.json',
+            route: '/api/',
           }
         ],
         theme: {

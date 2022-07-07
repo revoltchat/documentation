@@ -23,6 +23,7 @@ The following permissions are currently allocated:
 | `ManageChannel` | `1` | Manage the channel or channels on the server
 | `ManageServer` | `2` | Manage the server
 | `ManagePermissions` | `4` | Manage permissions on servers or channels
+| `ManageCustomisation` | `8` | Manage emoji on servers
 | `ManageRole` | `8` | Manage roles on server
 | `KickMembers` | `64` | Kick other members below their ranking
 | `BanMembers` | `128` | Ban other members below their ranking

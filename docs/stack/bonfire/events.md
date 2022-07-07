@@ -113,7 +113,8 @@ Data for use by client, data structures match the API specification.
     "type": "Ready",
     "users": [{..}],
     "servers": [{..}],
-    "channels": [{..}]
+    "channels": [{..}],
+    "emojis"?: [{..}]
 }
 ```
 
@@ -421,3 +422,25 @@ Your relationship with another user has changed.
 ```
 
 - `status` field matches Relationship Status in API.
+
+### EmojiCreate
+
+Emoji created, the event object has the same schema as the Emoji object in the API with the addition of an event type.
+
+```json
+{
+    "type": "EmojiCreate",
+    [..]
+}
+```
+
+### EmojiDelete
+
+Emoji has been deleted.
+
+```json
+{
+    "type": "EmojiDelete",
+    "id": "{emoji_id}"
+}
+```

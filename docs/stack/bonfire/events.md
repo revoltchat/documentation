@@ -416,11 +416,12 @@ Your relationship with another user has changed.
 {
     "type": "UserRelationship",
     "id": "{your_user_id}",
-    "user": "{other_user_id}",
+    "user": "{..}",
     "status": "{status}"
 }
 ```
 
+- `user` field contains a User object.
 - `status` field matches Relationship Status in API.
 
 ### EmojiCreate

@@ -23,8 +23,8 @@ The following permissions are currently allocated:
 | `ManageChannel` | `1` | Manage the channel or channels on the server
 | `ManageServer` | `2` | Manage the server
 | `ManagePermissions` | `4` | Manage permissions on servers or channels
-| `ManageCustomisation` | `8` | Manage emoji on servers
 | `ManageRole` | `8` | Manage roles on server
+| `ManageCustomisation` | `16` | Manage emoji on servers
 | `KickMembers` | `64` | Kick other members below their ranking
 | `BanMembers` | `128` | Ban other members below their ranking
 | `TimeoutMembers` | `256` | Timeout other members below their ranking
@@ -42,6 +42,7 @@ The following permissions are currently allocated:
 | `SendEmbeds` | `67108864` | Send embedded content in this channel
 | `UploadFiles` | `134217728` | Send attachments and media in this channel
 | `Masquerade` | `268435456` | Masquerade messages using custom nickname and avatar
+| `React` | `536870912` | React to messages with emojis
 | `Connect` | `1073741824` | Connect to a voice channel
 | `Speak` | `2147483648` | Speak in a voice call
 | `Video` | `4294967296` | Share video in a voice call

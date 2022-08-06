@@ -30,9 +30,9 @@ The Revolt stack is quite small, fragmented and easy to run which comes at the c
 - About 30GB of free disk space to ensure everything can be installed and built.
 
   You may want to run `cargo clean` in project folders frequently if you do not have much.
-- At **minimum** 16GB of free memory:
-  - `500MB` to run the Revolt stack
-  - Between `10GB` and `12GB` to run Visual Studio Code (includes rust-analyzer)
+- I recommend at **minimum** 16GB of free memory:
+  - `500MB` to run the Revolt stack (production builds use significantly less memory)
+  - Between `4GB` and `12GB` to run Visual Studio Code with rust-analyzer
   - `2GB` to run Chromium (conservative estimate)
 
 :::warning Important!
@@ -57,52 +57,71 @@ Ideal machines for working with the full stack have `32GB` or more of memory to 
 
 You need to have these tools installed and ready to go.
 
-- Node.js (LTS recommended)
-- npm (bundled with Node.js) or Yarn (preferred; [Classic (1.x)](https://classic.yarnpkg.com/lang/en/))
+- Node.js (v16 at minimum)
+- Yarn (enable [corepack](https://nodejs.org/api/corepack.html#enabling-the-feature): `corepack enable`)
 - Rust (in some cases, you may need [the Nightly toolchain](https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust))
 - Docker
 - Git
+- mold (optional but recommended, [see mold](https://github.com/rui314/mold))
 
 If working with the web app, please use and test your changes on:
 - A Chromium browser (e.g. Chrome or Edge)
 - A WebKit browser (e.g. Safari or Epiphany)
 - Firefox
 
-## Setup Environment
+## 5. Setup Backend
 
-To get started, first install the stack CLI.
+To get started, pull the backend repository:
 
 ```bash
-# For npm users
-npm i -g revolt-stack
-
-# For yarn users
-yarn global add revolt-stack
+git clone https://github.com/revoltchat/backend
+cd backend
 ```
 
-Now create a new folder where you want to install Revolt into.
+Bring up required containers:
 
 ```bash
-mkdir /path/to/revolt
-cd /path/to/revolt
+docker-compose up -d
 ```
 
-Finally, initialise everything:
+:::caution Working on Autumn and January
+
+Currently Autumn and January are not part of the backend repository and must be worked on separately, no guidance is provided at this time.
+
+:::
+
+Now run the two core projects:
 
 ```bash
-revolt init
-revolt env
-revolt build
+# without mold
+cargo run --bin revolt-delta
+cargo run --bin revolt-bonfire
+
+# with mold
+mold -run cargo run --bin revolt-delta
+mold -run cargo run --bin revolt-bonfire
 ```
 
-## Working with Revolt
+## 6. Configure Client
 
-You can now open a VSCode workspace at the root of the directory you just installed the project to.
-
-To run Revolt, simply open a terminal inside of any project folder or the root directory and run:
+To get started, pull revite with all requirements:
 
 ```bash
-revolt run
+git clone --recursive https://github.com/revoltchat/revite
+cd revite
+yarn
+```
+
+Create an `.env.local` file with the contents:
+
+```bash
+VITE_API_URL=http://local.revolt.chat:8000
+```
+
+Now start the app:
+
+```bash
+yarn dev --port 3001
 ```
 
 You can now access Revite (the web client) at [http://local.revolt.chat:3001](http://local.revolt.chat:3001).

@@ -30,10 +30,12 @@ The Revolt stack is quite small, fragmented and easy to run which comes at the c
 - About 30GB of free disk space to ensure everything can be installed and built.
 
   You may want to run `cargo clean` in project folders frequently if you do not have much.
-- I recommend at **minimum** 16GB of free memory:
+- I recommend at **minimum** 4GB of free memory:
   - `500MB` to run the Revolt stack (production builds use significantly less memory)
-  - Between `4GB` and `12GB` to run Visual Studio Code with rust-analyzer
-  - `2GB` to run Chromium (conservative estimate)
+  - Between `2GB` and `12GB` to run Visual Studio Code with rust-analyzer
+  - `1GB` to run a browser (conservative estimate)
+
+In my testing, I only used 2.7gb when first running the development environment as of 2022-08-06 ([before](https://autumn.revolt.chat/attachments/y9HRls2A7KlTbcWOAzBKoT-24CCNs1-yg5-Oqo7quL/image.png), [after](https://autumn.revolt.chat/attachments/lDRJGnmD9tEXqEc2Yuz-2vVZc9qfPC4YD80Qa1zQbQ/image.png)).
 
 :::warning Important!
 
@@ -47,7 +49,7 @@ You'll probably be fine with 2GB of free memory or less.
 
 Keep in mind, the **free memory** recommendation is specifically about **free memory**, you should have more to buffer for any applications you use such as: Communications, Browser, Music Player, etc.
 
-If you have around `24GB` and especially around `16GB` of memory, you should be using Linux with swap enabled or else you'll find yourself running out frequently.
+If you have around `24GB` and especially around `16GB` of memory, you should be using Linux with swap enabled or else you may find yourself running out frequently.
 
 Ideal machines for working with the full stack have `32GB` or more of memory to buffer for the stack and other apps.
 

@@ -171,6 +171,47 @@ Message has been deleted.
 }
 ```
 
+### MessageReact
+
+A reaction has been added to a message.
+
+```json
+{
+    "type": "MessageReact",
+    "id": "{message_id}",
+    "channel_id": "{channel_id}",
+    "user_id": "{user_id}",
+    "emoji_id": "{emoji_id}"
+}
+```
+
+### MessageUnreact
+
+A reaction has been removed from a message.
+
+```json
+{
+    "type": "MessageUnreact",
+    "id": "{message_id}",
+    "channel_id": "{channel_id}",
+    "user_id": "{user_id}",
+    "emoji_id": "{emoji_id}"
+}
+```
+
+### MessageRemoveReaction
+
+A certain reaction has been removed from the message.
+
+```json
+{
+    "type": "MessageRemoveReaction",
+    "id": "{message_id}",
+    "channel_id": "{channel_id}",
+    "emoji_id": "{emoji_id}"
+}
+```
+
 ### ChannelCreate
 
 Channel created, the event object has the same schema as the Channel object in the API with the addition of an event type.

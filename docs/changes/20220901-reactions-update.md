@@ -11,7 +11,7 @@ This update adds support for message reactions, including the following REST rou
 
 It adds a new permission `React` with value `536870912`.
 
-It adds two new events:
+It adds three new events:
 - `MessageReact { id: String; channel_id: String; user_id: String; emoji_id: String; }`
 - `MessageUnreact { id: String; channel_id: String; user_id: String; emoji_id: String; }`
 - `MessageRemoveReaction { id: String; channel_id: String; emoji_id: String; }`

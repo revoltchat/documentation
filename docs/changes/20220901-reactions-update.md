@@ -2,7 +2,7 @@
 slug: 20220901-reactions-update
 ---
 
-# 20220907-1: Reactions Update
+# 20220901-1: Reactions Update
 
 This update adds support for message reactions, including the following REST routes:
 - `PUT /channels/<id>/messages/<id>/reactions/<emoji>`: Add reaction to message

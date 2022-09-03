@@ -8,3 +8,4 @@ This section of the documentation details upcoming, recent and past API changes.
 | 2022-06-08 | [Friends API v2](/changes/20220608-friends-api-v2) | 2022-06-09 | ✅ |
 | 2022-07-07 | [Emoji Update](/changes/20220707-emoji-update) | 2022-07-07 | ✅ |
 | 2022-09-01 | [Reactions Update](/changes/20220901-reactions-update) | 2022-09-01 | ✅ |
+| 2022-09-03 | [Changes to role colours, masquerades, members and user timeouts](/changes/20220903-minor-changes) | 2022-09-03 | ✅ |

@@ -112,6 +112,7 @@ To get started, pull revite with all requirements:
 git clone --recursive https://github.com/revoltchat/revite
 cd revite
 yarn
+yarn build:deps
 ```
 
 Create an `.env.local` file with the contents:

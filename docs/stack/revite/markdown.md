@@ -13,7 +13,7 @@ Use it to **make your text *stand out!***
 |-------------------|------------------------------------------------------|
 | **bold**          | \*\*bold\*\* or \_\_bold\_\_                         |
 | *italics*         | \*italics\* or \_italics\_                           |
-| **bold italics**  | \*\*\*bold italics\*\*\* or \_\_\_bold italics\_\_\_ |
+| ***bold italics***  | \*\*\*bold italics\*\*\* or \_\_\_bold italics\_\_\_ |
 | ~~strikethrough~~ | \~\~strikethrough\~\~                                |
 
 ## Code Blocks  

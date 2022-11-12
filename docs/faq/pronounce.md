@@ -14,6 +14,6 @@ The first audio file was contributed by [@Albonycal](https://github.com/revoltch
 
 ### Revite
 
-`/rɪˈvɪte/`
+`/rɪˈvaɪt/`
 
 <audio src="https://user-images.githubusercontent.com/67057319/133424659-c32986ae-db9e-4824-9c5c-04909291c635.mp4" controls />

@@ -236,12 +236,13 @@ You can display timestamps in your messages. The format requires you to get the 
 
 | Style                               | Markdown           |
 |-------------------------------------|--------------------|
-| `01:37`                             | <t:1663846662:t> |
-| `01:37:42`                          | <t:1663846662:T> |
-| `22 September 2022`                 | <t:1663846662:D> |
-| `22 September 2022 01:37`           | <t:1663846662:f> |
-| `Thursday, 22 September 2022 01:37` | <t:1663846662:F> |
-| `in 9 months` (f.e.)                | <t:1663846662:R> |
+| `01:37`                             | <t:1663846662:t>   |
+| `01:37:42`                          | <t:1663846662:T>   |
+| `22 September 2022 02:37`           | <t:1663846662:d>   |
+| `22 September 2022`                 | <t:1663846662:D>   |
+| `22 September 2022 01:37`           | <t:1663846662:f>   |
+| `Thursday, 22 September 2022 01:37` | <t:1663846662:F>   |
+| `in 9 months` (f.e.)                | <t:1663846662:R>   |
 
 ## Emoji
 

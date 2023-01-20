@@ -16,3 +16,5 @@ It also adds one REST routes:
 - `GET /users/<user_id>/flags`: Fetch user flags
 
 If your account is disabled, login will no longer throw an error, instead it will return `Disabled { user_id: String }` with status code 200.
+
+You must now also specify a list of reactions when enabling restrict reactions.

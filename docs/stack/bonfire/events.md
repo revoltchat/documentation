@@ -14,8 +14,8 @@ Authenticate with Revolt.
 
 ```json
 {
-    "type": "Authenticate",
-    "token": "{token}"
+  "type": "Authenticate",
+  "token": "{token}"
 }
 ```
 
@@ -25,8 +25,8 @@ Tell other users that you have begun typing in a channel.
 
 ```json
 {
-    "type": "BeginTyping",
-    "channel": "{channel_id}"
+  "type": "BeginTyping",
+  "channel": "{channel_id}"
 }
 ```
 
@@ -36,8 +36,8 @@ Tell other users that you have stopped typing in a channel.
 
 ```json
 {
-    "type": "EndTyping",
-    "channel": "{channel_id}"
+  "type": "EndTyping",
+  "channel": "{channel_id}"
 }
 ```
 
@@ -47,8 +47,8 @@ Ping the server, you can specify a timestamp that you'll receive back.
 
 ```json
 {
-    "type": "Ping",
-    "data": 0
+  "type": "Ping",
+  "data": 0
 }
 ```
 
@@ -60,12 +60,13 @@ An error occurred which meant you couldn't authenticate.
 
 ```json
 {
-    "type": "Error",
-    "error": "{error_id}"
+  "type": "Error",
+  "error": "{error_id}"
 }
 ```
 
 The `{error_id}` can be one of the following:
+
 - `LabelMe`: uncategorised error
 - `InternalError`: the server ran into an issue
 - `InvalidSession`: authentication details are incorrect
@@ -78,7 +79,7 @@ The server has authenticated your connection and you will shortly start receivin
 
 ```json
 {
-    "type": "Authenticated"
+  "type": "Authenticated"
 }
 ```
 
@@ -99,8 +100,8 @@ Ping response from the server.
 
 ```json
 {
-    "type": "Pong",
-    "data": 0
+  "type": "Pong",
+  "data": 0
 }
 ```
 
@@ -165,9 +166,9 @@ Message has been deleted.
 
 ```json
 {
-    "type": "MessageDelete",
-    "id": "{message_id}",
-    "channel": "{channel_id}"
+  "type": "MessageDelete",
+  "id": "{message_id}",
+  "channel": "{channel_id}"
 }
 ```
 
@@ -177,11 +178,11 @@ A reaction has been added to a message.
 
 ```json
 {
-    "type": "MessageReact",
-    "id": "{message_id}",
-    "channel_id": "{channel_id}",
-    "user_id": "{user_id}",
-    "emoji_id": "{emoji_id}"
+  "type": "MessageReact",
+  "id": "{message_id}",
+  "channel_id": "{channel_id}",
+  "user_id": "{user_id}",
+  "emoji_id": "{emoji_id}"
 }
 ```
 
@@ -191,11 +192,11 @@ A reaction has been removed from a message.
 
 ```json
 {
-    "type": "MessageUnreact",
-    "id": "{message_id}",
-    "channel_id": "{channel_id}",
-    "user_id": "{user_id}",
-    "emoji_id": "{emoji_id}"
+  "type": "MessageUnreact",
+  "id": "{message_id}",
+  "channel_id": "{channel_id}",
+  "user_id": "{user_id}",
+  "emoji_id": "{emoji_id}"
 }
 ```
 
@@ -205,10 +206,10 @@ A certain reaction has been removed from the message.
 
 ```json
 {
-    "type": "MessageRemoveReaction",
-    "id": "{message_id}",
-    "channel_id": "{channel_id}",
-    "emoji_id": "{emoji_id}"
+  "type": "MessageRemoveReaction",
+  "id": "{message_id}",
+  "channel_id": "{channel_id}",
+  "emoji_id": "{emoji_id}"
 }
 ```
 
@@ -247,8 +248,8 @@ Channel has been deleted.
 
 ```json
 {
-    "type": "ChannelDelete",
-    "id": "{channel_id}"
+  "type": "ChannelDelete",
+  "id": "{channel_id}"
 }
 ```
 
@@ -258,9 +259,9 @@ A user has joined the group.
 
 ```json
 {
-    "type": "ChannelGroupJoin",
-    "id": "{channel_id}",
-    "user": "{user_id}"
+  "type": "ChannelGroupJoin",
+  "id": "{channel_id}",
+  "user": "{user_id}"
 }
 ```
 
@@ -270,9 +271,9 @@ A user has left the group.
 
 ```json
 {
-    "type": "ChannelGroupLeave",
-    "id": "{channel_id}",
-    "user": "{user_id}"
+  "type": "ChannelGroupLeave",
+  "id": "{channel_id}",
+  "user": "{user_id}"
 }
 ```
 
@@ -282,9 +283,9 @@ A user has started typing in this channel.
 
 ```json
 {
-    "type": "ChannelStartTyping",
-    "id": "{channel_id}",
-    "user": "{user_id}"
+  "type": "ChannelStartTyping",
+  "id": "{channel_id}",
+  "user": "{user_id}"
 }
 ```
 
@@ -294,9 +295,9 @@ A user has stopped typing in this channel.
 
 ```json
 {
-    "type": "ChannelStopTyping",
-    "id": "{channel_id}",
-    "user": "{user_id}"
+  "type": "ChannelStopTyping",
+  "id": "{channel_id}",
+  "user": "{user_id}"
 }
 ```
 
@@ -306,10 +307,10 @@ You have acknowledged new messages in this channel up to this message ID.
 
 ```json
 {
-    "type": "ChannelAck",
-    "id": "{channel_id}",
-    "user": "{user_id}",
-    "message_id": "{message_id}"
+  "type": "ChannelAck",
+  "id": "{channel_id}",
+  "user": "{user_id}",
+  "message_id": "{message_id}"
 }
 ```
 
@@ -349,8 +350,8 @@ Server has been deleted.
 
 ```json
 {
-    "type": "ServerDelete",
-    "id": "{server_id}"
+  "type": "ServerDelete",
+  "id": "{server_id}"
 }
 ```
 
@@ -381,9 +382,9 @@ A user has joined the group.
 
 ```json
 {
-    "type": "ServerMemberJoin",
-    "id": "{server_id}",
-    "user": "{user_id}"
+  "type": "ServerMemberJoin",
+  "id": "{server_id}",
+  "user": "{user_id}"
 }
 ```
 
@@ -393,9 +394,9 @@ A user has left the group.
 
 ```json
 {
-    "type": "ServerMemberLeave",
-    "id": "{server_id}",
-    "user": "{user_id}"
+  "type": "ServerMemberLeave",
+  "id": "{server_id}",
+  "user": "{user_id}"
 }
 ```
 
@@ -423,9 +424,9 @@ Server role has been deleted.
 
 ```json
 {
-    "type": "ServerRoleDelete",
-    "id": "{server_id}",
-    "role_id": "{role_id}"
+  "type": "ServerRoleDelete",
+  "id": "{server_id}",
+  "role_id": "{role_id}"
 }
 ```
 
@@ -455,15 +456,36 @@ Your relationship with another user has changed.
 
 ```json
 {
-    "type": "UserRelationship",
-    "id": "{your_user_id}",
-    "user": "{..}",
-    "status": "{status}"
+  "type": "UserRelationship",
+  "id": "{your_user_id}",
+  "user": "{..}",
+  "status": "{status}"
 }
 ```
 
 - `user` field contains a User object.
 - `status` field matches Relationship Status in API.
+
+### UserPlatformWipe
+
+User has been platform banned or deleted their account.
+
+Clients should remove the following associated data:
+
+- Messages
+- DM Channels
+- Relationships
+- Server Memberships
+
+User flags are specified to explain why a wipe is occurring though not all reasons will necessarily ever appear.
+
+```json
+{
+  "type": "UserPlatformWipe",
+  "user_id": "{user_id}",
+  "flags": "{user_flags}"
+}
+```
 
 ### EmojiCreate
 
@@ -471,8 +493,8 @@ Emoji created, the event object has the same schema as the Emoji object in the A
 
 ```json
 {
-    "type": "EmojiCreate",
-    [..]
+  "type": "EmojiCreate",
+  [..]
 }
 ```
 
@@ -482,7 +504,45 @@ Emoji has been deleted.
 
 ```json
 {
-    "type": "EmojiDelete",
-    "id": "{emoji_id}"
+  "type": "EmojiDelete",
+  "id": "{emoji_id}"
+}
+```
+
+### Auth
+
+Forwarded events from rAuth, currently only session deletion events are forwarded.
+
+```json
+{
+  "type": "Auth",
+  "event_type": "{event_type}",
+  [..]
+}
+```
+
+Event type may be defined as one of the following with the additional properties:
+
+#### DeleteSession
+
+A session has been deleted.
+
+```json
+{
+  "event_type": "DeleteSession",
+  "user_id": "{user_id}",
+  "session_id": "{session_id}"
+}
+```
+
+#### DeleteAllSessions
+
+All sessions for this account have been deleted, optionally excluding a given ID.
+
+```json
+{
+  "event_type": "DeleteAllSessions",
+  "user_id": "{user_id}",
+  "exclude_session_id": "{session_id}"
 }
 ```

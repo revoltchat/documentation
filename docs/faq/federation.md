@@ -4,6 +4,17 @@ sidebar_position: 2
 
 # 1. No federation?
 
+:::danger
+
+Hold on, this article is quite old at this point, just a few things to keep in mind:
+
+- Federation may end up being part of the project in some capacity in the future, just at the moment it is not part of any feature (_at least publicly_) on the roadmap.
+- The complexity and time arguments below are still valid but may be necessary to tackle in the future.
+
+If you have some general ideas on where and how federation could be implemented, feel free to drop into the [Lounge](https://rvlt.gg/Testers) #Revolt Development.
+
+:::
+
 :::caution
 
 This article expects prior knowledge of federation - if you're new to the concept, [learn more here](https://matrix.org/faq/#what-does-federated-mean%3F).
@@ -19,6 +30,7 @@ This question comes around every now and then.<br/>A lot of people are curious w
 We don't think federation is beneficial to Revolt and would actively hinder our stance on privacy. In short, federation is prone to leaking your metadata, could make removing your data harder, and we otherwise have no incentive to develop support if it we aren't able to use it for the main platform (revolt.chat).
 
 In terms of technical reasons:
+
 - We don't have the manpower or resources to implement federation into our protocol.
 - It would be difficult to adopt our protocol to work with federation.
 

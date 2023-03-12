@@ -14,4 +14,4 @@ However if you would like to get a server verified, you should satisfy one of th
 
 Server verification also comes with a vanity invite, so please have one ready if you want to apply.
 
-To apply, just drop an email at [support@revolt.chat][mailto:support@revolt.chat] or [ask @insert in Lounge](https://rvlt.gg/Testers).
+To apply, just drop an email at [support@revolt.chat](mailto:support@revolt.chat) or [ask @insert in Lounge](https://rvlt.gg/Testers).

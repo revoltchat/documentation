@@ -8,7 +8,7 @@ Currently, you can only apply to verify servers given that you have a valid reas
 
 However if you would like to get a server verified, you should satisfy one of the following criteria:
 
-- Official community for a well-established open source project (these are fast tracked)
+- Official community for a well-established open source project
 - Official community for any other well-established product, service, or person
 - Large and active distinct pre-existing community
 

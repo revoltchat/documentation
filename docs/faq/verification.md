@@ -16,6 +16,6 @@ However if you would like to get a server verified, you should satisfy one of th
   This means we are not currently verifying generic servers that centre around a topic unless if it meets one of the first two criteria.
   Though in special circumstances, well known on platform communities may also be considered.
 
-Server verification also comes with a vanity invite, so please have one ready if you want to apply. To apply, drop an email at [support@revolt.chat](mailto:support@revolt.chat).
+Server verification also comes with a vanity invite, so please have one ready if you want to apply. To apply, drop an email at [contact@revolt.chat](mailto:contact@revolt.chat).
 
 We also periodically prune verification from servers that have fallen into disrepair and / or otherwise are no longer active.

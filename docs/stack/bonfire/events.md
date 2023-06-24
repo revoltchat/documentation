@@ -449,6 +449,7 @@ User has been updated.
   - `ProfileBackground`
   - `StatusText`
   - `Avatar`
+  - `DisplayName`
 
 ### UserRelationship
 

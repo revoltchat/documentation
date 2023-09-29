@@ -512,7 +512,7 @@ Emoji has been deleted.
 
 ### Auth
 
-Forwarded events from rAuth, currently only session deletion events are forwarded.
+Forwarded events from [Authifier](https://github.com/authifier/authifier), currently only session deletion events are forwarded.
 
 ```json
 {

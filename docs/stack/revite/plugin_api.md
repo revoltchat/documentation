@@ -6,7 +6,7 @@ slug: /plugin-api
 # Plugin API
 
 :::warning
-The Plugin API is very powerful. **Tread carefully.**
+The Plugin API is very powerful. **Read carefully.**
 
 **Zero guarantees or sandboxes are provided.** Your code is run as-is.
 :::

@@ -378,7 +378,7 @@ Server member details updated.
 
 ### ServerMemberJoin
 
-A user has joined the group.
+A user has joined the server.
 
 ```json
 {
@@ -390,7 +390,7 @@ A user has joined the group.
 
 ### ServerMemberLeave
 
-A user has left the group.
+A user has left the server.
 
 ```json
 {
